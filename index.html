@@ -74,16 +74,16 @@
        <section>
             <h2>I Form</h2>
             <label for="nome">Nome: </label> 
-            <input type="text" id="nome" name="nome" autocomplete="on" placeholder="Inserisci il tuo nome"><br><br>
+            <input type="text" id="nome" name="nome" autocomplete="on" placeholder="Inserisci il tuo nome" required><br><br>
             <label for="cognome">Cognome: </label>
-            <input type="text" id="cognome" name="cognome" autocomplete="on" placeholder="Inserisci il tuo cognome"><br><br>
+            <input type="text" id="cognome" name="cognome" autocomplete="on" placeholder="Inserisci il tuo cognome" required><br><br>
             <label for="descrizione">Dicci di te:</label>
-            <textarea id="descrizione" name="descrizione" rows="4" cols="50">Aggiungi qui una tua descrizione...</textarea><br><br>
+            <textarea id="descrizione" name="descrizione" rows="4" cols="50" required>Aggiungi qui una tua descrizione...</textarea><br><br>
             Sei maschio o femmina?<br>
             <label for="maschio">Maschio</label>
-            <input type="radio" id="maschio" name="genere" value="Maschio"><br>
+            <input type="radio" id="maschio" name="genere" value="Maschio" required><br>
             <label for="femmina">Femmina</label>
-            <input type="radio" id="femmina" name="genere" value="Femmina"><br><br>
+            <input type="radio" id="femmina" name="genere" value="Femmina" required><br><br>
             <input type="checkbox" id="policy" name="policy" value="Policy" required>
             <label for="policy">Accetto termini e condizioni</label><br><br>
             <input type="submit" value="Invia">
