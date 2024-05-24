@@ -19,13 +19,13 @@
         </style>
     </head>
     <main>
-       <section>
+        <aside>L'arrocco è una mossa con la quale puoi mettere al sicuro il tuo re.</aside>
+        <section>
             <h2>Prima Parte</h2>
             <h3>Esempio dell'uso di 'aside'</h3>
             <p>Negli scacchi, se il re o la torre sono sotto attacco, allora non si può arroccare.
-                <br>Cos'è l'arrocco? Guarda a lato! ->
+            <br>Cos'è l'arrocco? Guarda a lato! ->
             </p>
-            <aside>L'arrocco è una mossa con la quale puoi mettere al sicuro il tuo re.</aside>
             <h4>Liste</h4>
             <ul style="list-style-type:georgian">
                 <li>Cani</li>
@@ -47,7 +47,7 @@
        <section>
         <h2>Seconda Parte</h2>
         <h3>Immagine responsiva</h3>
-        <figure>
+        <!--<figure>
             <img 
             alt="Acqua" 
             srcset="
@@ -55,13 +55,29 @@
             img/acqua.png 2x,
             img/acqua.png 3x,
             img/acqua.png 10x,
-            img/acqua.png 50x,
-            img/acqua.png 100x " >
+            img/acqua.png 50x" >
             <figcaption>Fig.1 - Acqua </figcaption>
-        </figure>
+        </figure>-->
+        <picture>
+            <img src="img/acqua.png" width="300" alt="aria" />
+            <figcaption>Fig.3 - Aria</figcaption>
+        </picture>
+        <picture>
+            <source srcset="img/OIP.jpg" media="(min-width: 500px)" />
+            <img src="img/OIP.jpg" alt="fuoco" width="300"/>
+            <figcaption>Fig.2 - Fuoco</figcaption>
+        </picture>
+        <picture>
+            <img src="img/R.jpg" width="300" alt="aria" />
+            <figcaption>Fig.3 - Aria</figcaption>
+        </picture>
+        <picture>
+            <img src="img/suolo_5-1024x576.jpg" width="300" alt="terra" />
+            <figcaption>Fig.4 - Terra</figcaption>
+        </picture>
         <h4>"Dancing in the street"</h4>
         <video controls width="320" height="240">
-            <source src="https://www.youtube.com/watch?v=o82d9T4D-8I" type="">
+            <source src="https://www.youtube.com/watch?v=o82d9T4D-8I" type="video/mp4">
             Video non supportato :/
         </video>
         <h5>Logo svg</h5>
@@ -74,25 +90,45 @@
        </section>
        <section>
             <h2>I Form</h2>
-            <form action="feature.txt" method="post">
-                <label for="nome">Nome: </label> 
-                <input type="text" id="nome" name="nome" autocomplete="on" placeholder="Inserisci il tuo nome" required><br><br>
-                <label for="cognome">Cognome: </label>
-                <input type="text" id="cognome" name="cognome" autocomplete="on" placeholder="Inserisci il tuo cognome" required><br><br>
-                <label for="descrizione">Dicci di te:</label>
-                <textarea id="descrizione" name="descrizione" rows="4" cols="50" required>Aggiungi qui una tua descrizione...</textarea><br><br>
+            <form action="/" method="get">
+                <div>
+                    <label for="nome">Nome: </label> 
+                    <input type="text" id="nome" name="nome" autocomplete="on" placeholder="Inserisci il tuo nome" required>
+                </div>
+                <div>
+                    <label for="cognome">Cognome: </label>
+                    <input type="text" id="cognome" name="cognome" autocomplete="on" placeholder="Inserisci il tuo cognome" required>
+                </div>
+                <div>
+                    <label for="descrizione">Dicci di te:</label>
+                    <textarea id="descrizione" name="descrizione" rows="4" cols="50" required placeholder="Aggiungi qui una tua descrizione..."></textarea> 
+                </div>
                 Sei maschio o femmina?<br>
-                <label for="maschio">Maschio</label>
-                <input type="radio" id="maschio" name="genere" value="Maschio" required><br>
-                <label for="femmina">Femmina</label>
-                <input type="radio" id="femmina" name="genere" value="Femmina" required><br><br>
-                <input type="checkbox" id="policy" name="policy" value="Policy" required>
-                <label for="policy">Accetto termini e condizioni</label><br><br>
-                <input type="submit" value="Invia">
+                <div>
+                    <label for="maschio">Maschio</label>
+                    <input type="radio" id="maschio" name="genere" value="Maschio" required>
+                    <label for="femmina">Femmina</label>
+                    <input type="radio" id="femmina" name="genere" value="Femmina" required>
+                </div>
+                <div>
+                    <input type="checkbox" id="policy" name="policy" value="Policy" required>
+                    <label for="policy">Accetto termini e condizioni</label>
+                </div>
+                <div>
+                    <button type="submit">Invia</button>
+                </div>
+                <div>
+                    <select name="range" required>
+                        <option value="">Seleziona range</option>
+                        <option value="10">10</option>
+                        <option value="15">15</option>
+                        <option value="20">20</option>
+                    </select>
+                </div>
             </form>
        </section>
-       <footer>
-          <p>Questa è una pagina di prova per l'utilizzo di html e css</p>
-       </footer>
     </main>
+    <footer>
+          <p>Questa è una pagina di prova per l'utilizzo di html e css</p>
+    </footer>
 </html>
