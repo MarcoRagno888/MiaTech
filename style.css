@@ -34,3 +34,15 @@ h6 {
 .i30px {
     font-size: 30px;
 }
+
+.trasparency {
+    opacity: 0.1;
+}
+
+.bold {
+    font-weight: 500;
+}
+
+.shadow {
+    text-shadow: 2px 2px red;
+}
