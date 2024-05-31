@@ -63,3 +63,11 @@ a:hover {
 #lastLi::first-letter {
     color: white;
 }
+
+#p2 {
+    color: black;
+}
+
+.paragraph {
+    color: red;
+}
