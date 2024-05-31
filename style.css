@@ -71,3 +71,8 @@ a:hover {
 .paragraph {
     color: red;
 }
+
+.container {
+    color: black;
+    text-align: center;
+}
