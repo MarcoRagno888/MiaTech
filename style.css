@@ -84,3 +84,7 @@ a:hover {
 #p4 {
     color: #0000ff;
 }
+
+#p5 {
+    color: rgba(0, 0, 255, 0.3);
+}
