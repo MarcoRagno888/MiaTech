@@ -1,3 +1,7 @@
+* {
+    background-image: url("img/acqua.png");
+}
+
 p {
     color: aqua;
     text-align: right;
