@@ -9,6 +9,7 @@ p {
 
 h1 {
     color: blue;
+    mo
 }
 
 h2 {
@@ -49,4 +50,8 @@ h6 {
 
 .shadow {
     text-shadow: 2px 2px red;
+}
+
+p, h1, button {
+    text-align: center;
 }
