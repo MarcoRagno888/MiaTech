@@ -59,3 +59,7 @@ p, h1, button {
 a:hover {
     color: white;
 }
+
+#lastLi::first-letter {
+    color: white;
+}
