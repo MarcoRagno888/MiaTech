@@ -119,11 +119,11 @@ html {
     font-size: 2px;
 }
 
-.rem {
+div.em-rem p.rem {
     font-size: 7rem;
 }
 
-.em {
+div.em-rem .em {
     font-size: 7em;
 }
 
@@ -132,6 +132,8 @@ html {
     border: #0000ff solid; 
     margin: 20px;;
 }
+
+#padd a[data-b="3"] {}
 
 ul li {
     display: inline-block;
@@ -142,4 +144,16 @@ p span {
     background-color: blue;
     width: 5px;
     height: 5px;
+}
+
+p span.inline {
+    display: inline;
+}
+
+p span.inline-block {
+    display: inline-block;
+}
+
+p span.block {
+    display: block;
 }
