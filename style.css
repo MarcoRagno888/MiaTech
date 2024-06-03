@@ -129,7 +129,7 @@ html {
 
 #padd {
     padding: 20px;
-    border: #0000ff solid; /* per renderlo visibile */
-    margin: 20px;
+    border: #0000ff solid; 
+    margin: 20px;;
 }
 
