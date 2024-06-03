@@ -137,3 +137,9 @@ ul li {
     display: inline-block;
 }
 
+p span {
+    border: 3px;
+    background-color: blue;
+    width: 5px;
+    height: 5px;
+}
