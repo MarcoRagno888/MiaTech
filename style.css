@@ -133,3 +133,7 @@ html {
     margin: 20px;;
 }
 
+ul li {
+    display: inline-block;
+}
+
