@@ -105,3 +105,9 @@ a:hover {
     background-color: red;
 }
 
+.square_2 {
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+} 
+
