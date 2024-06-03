@@ -1,9 +1,9 @@
 * {
     /*background-image: linear-gradient(45deg, red, blue);*/
-    font-size: 30px;
+    /*font-size: 30px;*/
 }
 
-p {
+/*p {
     color: aqua;
     text-align: right;
 }
@@ -15,7 +15,7 @@ h1 {
 
 h2 {
     color: red;
-}
+}*/
 
 h3 {
     color: yellow;
@@ -53,7 +53,7 @@ h6 {
     text-shadow: 2px 2px red;
 }
 
-p, h1, button {
+/*p,*/ h1, button {
     text-align: center;
 }
 
@@ -110,4 +110,20 @@ a:hover {
     height: 100px;
     background-color: aqua;
 } 
+
+html {
+    font-size: 16px;
+}
+
+.em-rem {
+    font-size: 2px;
+}
+
+.rem {
+    font-size: 7rem;
+}
+
+.em {
+    font-size: 7em;
+}
 
