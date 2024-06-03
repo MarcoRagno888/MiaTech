@@ -95,8 +95,8 @@ a:hover {
 }
 
 .container_square{
-    width: 400px;
-    height: 400px;
+    width: 200px;
+    height: 200px;
 }
 
 .square_1 {
@@ -125,5 +125,10 @@ html {
 
 .em {
     font-size: 7em;
+}
+
+#padd {
+    padding: 20px;
+    border: #0000ff solid; /* per renderlo visibile */
 }
 
