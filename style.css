@@ -141,7 +141,7 @@ ul li {
 
 header {
     display: inline-block;
-    position: sticky;
+    position: fixed;
     top: 0;
     border: black;
     background-color: aliceblue;
