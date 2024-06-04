@@ -139,6 +139,14 @@ ul li {
     display: inline-block;
 }
 
+header {
+    display: inline-block;
+    position: sticky;
+    top: 0;
+    border: black;
+    background-color: aliceblue;
+}
+
 /*p span {
     border: 3px;
     background-color: blue;
