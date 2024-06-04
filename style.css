@@ -161,3 +161,7 @@ p span.block {
  div p.vanish {
     display: none;
 }
+
+div img.float {
+    float: right;
+}
