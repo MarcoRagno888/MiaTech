@@ -169,3 +169,19 @@ div img.float {
 div.card > p.clear {
     clear: both;
 }
+
+div.three_columns > p {
+    float:left;
+    width: 33%;
+}
+
+div.three_columns #middle {
+    float: left;
+    width: 33%;
+}
+
+div.three_columns #right {
+    float: left;
+    width: 33%;
+}
+
