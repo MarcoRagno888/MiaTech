@@ -165,3 +165,7 @@ p span.block {
 div img.float {
     float: right;
 }
+
+div.card > p.clear {
+    clear: both;
+}
