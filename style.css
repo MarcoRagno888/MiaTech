@@ -193,3 +193,9 @@ div.three_columns #right {
     width: 33%;
 }
 
+footer {
+    position: fixed;
+    bottom: 0;
+    background-color: aquamarine;
+}
+
