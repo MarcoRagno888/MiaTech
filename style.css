@@ -1,3 +1,14 @@
+:root {
+    --red: rgb(255, 0, 0);
+}
+
+* {
+    color: var(--red);
+}
+
+
+
+
 /* {
     /*background-image: linear-gradient(45deg, red, blue);*/
     /*font-size: 30px;*/
