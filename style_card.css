@@ -1,0 +1,81 @@
+:root {
+    --close-size: 20px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.section {
+    padding: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.card {
+    width: 250px;
+    height: 350px;
+    /*border: 1px solid lightgray;*/
+    position: relative;
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+    transition: all ease-in-out 0.25s;
+    display: flex;
+    flex-direction: column;
+    border-radius: 4px;
+}
+
+.card:hover {
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+.card .close {
+    position: absolute;
+    width: var(--close-size);
+    height: var(--close-size);
+    border-radius: 50%;
+    border: 1px solid lightgray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 5px;
+    right: 5px;
+}
+
+.card .close::after,
+.card .close::before {
+    content: " ";
+    height: 60%;
+    width: calc(var(--close-size) / 10);
+    background-color: white;
+    border-radius: calc(var(--close-size) / 5);
+    position: absolute;
+}
+
+.card .close::after {
+    transform: rotate(-45deg);
+}
+
+.card .close::before {
+    transform: rotate(45deg);
+}
+
+.card .card__header {
+    width: 100%;
+}
+
+.card .card__header img {
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.card .card__body {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+}
+
