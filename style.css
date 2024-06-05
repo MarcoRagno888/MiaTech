@@ -1,12 +1,15 @@
 :root {
     --red: rgb(255, 0, 0);
+    --padd: 10px;
 }
 
 * {
     color: var(--red);
 }
 
-
+div {
+    padding: var(--padd);
+}
 
 
 /* {
