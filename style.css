@@ -15,6 +15,7 @@ div {
     display: flex;
     background-color: antiquewhite;
     flex-wrap: wrap;
+    align-items: center;
 }
 
 /* {
