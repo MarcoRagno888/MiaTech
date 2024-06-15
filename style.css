@@ -17,20 +17,23 @@ div {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    height: 500px;
 }
 
 .flex-item1 {
-    flex-shrink:0;
     border: 1px solid black;
+    align-self: flex-end;
 }
 
 .flex-item2 {
     border: 1px solid black;
     flex-basis: 100px;
+    align-self: center;
 }
 
 .flex-item3 {
     border: 1px solid black;
+    align-self: flex-start;
 }
 
 
