@@ -14,8 +14,12 @@ div {
 .flex-container {
     display: flex;
     background-color: antiquewhite;
-    flex-wrap: wrap;
-    justify-content: center;
+    align-items: center;
+}
+
+.flex-item3 {
+    flex-grow: 10;
+    border: 1px solid black;
 }
 
 /* {
