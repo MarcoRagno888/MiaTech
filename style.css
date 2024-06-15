@@ -25,12 +25,11 @@ div {
 }
 
 .flex-item2 {
-    flex-grow: 10;
     border: 1px solid black;
+    flex-basis: 100px;
 }
 
 .flex-item3 {
-    flex-grow: 10;
     border: 1px solid black;
 }
 
