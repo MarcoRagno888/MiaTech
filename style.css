@@ -14,7 +14,7 @@ div {
 .flex-container {
     display: flex;
     background-color: antiquewhite;
-    flex-direction: column-reverse;
+    flex-wrap: wrap;
 }
 
 /* {
