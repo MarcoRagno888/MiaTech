@@ -36,6 +36,10 @@ div {
     align-self: flex-start;
 }
 
+.grid_container {
+    display: grid;
+}
+
 
 
 /* {
