@@ -5,13 +5,16 @@
 
 * {
     color: var(--red);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-div {
+/*div {
     padding: var(--padd);
-}
+}*/
 
-.flex-container {
+/*.flex-container {
     display: flex;
     background-color: antiquewhite;
     flex-wrap: wrap;
@@ -34,11 +37,38 @@ div {
 .flex-item3 {
     border: 1px solid black;
     align-self: flex-start;
+}*/
+
+.grid-container {
+    display: grid;
+    gap: 1em;
+    grid-template-columns: auto auto auto;
+    background-color: green;
+    max-width: 80%;
+    justify-content: space-around;
+    margin-top: 10px;
+    margin-left: 10px;
 }
 
-.grid_container {
-    display: grid;
+.grid-item {
+    background-color: aliceblue;
+    border: 1px black;
 }
+
+.grid-item8 {
+    grid-area: 3 / 2 / 3 / 4;
+    background-color: aliceblue;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -241,11 +271,11 @@ div.three_columns #right {
     background-color: aquamarine;
 }*/
 
-div.absolute_square {
+/*div.absolute_square {
     border: black solid;
     width: 100px;
     height: 100px;
     position: absolute;
     right: 0;
-}
+}*/
 

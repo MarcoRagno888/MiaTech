@@ -7,3 +7,32 @@
 .playfair {
     font-family: Playfair Display, serif;
 }
+
+.nav_container {
+    background-color: #101d2d;
+    display: flex;
+    height: 75px;
+    width: 100%;
+    justify-content: center;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 1152px;
+    display: flex;
+    
+}
+
+.nav_logo {
+    display: flex;
+}
+
+.nav_menu {
+    display: flex;
+}
+
+.logo svg {
+    height: 32px;
+    width: 32px;
+    fill: #2174ea;
+}
