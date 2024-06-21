@@ -1,3 +1,9 @@
+@media screen and (max-width: 768px) {
+    body {
+        background-color: blue;
+    }
+}
+
 :root {
     --red: rgb(255, 0, 0);
     --padd: 10px;
