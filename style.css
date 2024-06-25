@@ -22,6 +22,8 @@
     'a b c d e' 40px
     'f g h i j' 40px
     'f g h i j' 40px / 1fr 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
 }
 
 .template-item1 {
