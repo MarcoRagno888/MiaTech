@@ -11,7 +11,6 @@
   align-items: center;
 }
 .main-header .navbar {
-  background-color: burlywood;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -24,11 +23,17 @@
   display: inline-block;
   font-size: 18px;
 }
-.main-header .navbar ul a {
+.main-header .navbar ul .btn, .main-header .navbar ul .contact-btn {
   text-decoration: none;
 }
-.main-header .navbar ul a:hover {
+.main-header .navbar ul .btn:hover, .main-header .navbar ul .contact-btn:hover {
   color: #ff0000;
+}
+
+.contact-btn {
+  background-color: #e7e7e7;
+  border: 1px solid;
+  border-color: #333333;
 }
 
 /*# sourceMappingURL=style.css.map */

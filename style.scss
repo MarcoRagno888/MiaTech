@@ -1,5 +1,8 @@
 $link-size: 18px;
 $link-color: #ff0000;
+$bg-color: #e7e7e7;
+$contact-border-color: #333333;
+
 * {
     margin: 0;
     padding: 0;
@@ -14,7 +17,6 @@ $link-color: #ff0000;
 
 
     .navbar {
-        background-color: burlywood;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -28,13 +30,21 @@ $link-color: #ff0000;
                 font-size: $link-size;
             }
 
-            a {
+            .btn {
                 text-decoration: none;
 
                 &:hover {
                     color: $link-color;
-                }
+                } 
             }
         }
     }
 }
+
+.contact-btn {
+    @extend .btn;
+    background-color: $bg-color;
+    border: 1px solid;
+    border-color: $contact-border-color;
+}
+                    
