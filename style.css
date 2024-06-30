@@ -1,5 +1,34 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .main-header {
-  background-color: blue;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-header .navbar {
+  background-color: burlywood;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 85%;
+}
+.main-header .navbar ul {
+  list-style: none;
+}
+.main-header .navbar ul li {
+  display: inline-block;
+  font-size: 18px;
+}
+.main-header .navbar ul a {
+  text-decoration: none;
+}
+.main-header .navbar ul a:hover {
+  color: #ff0000;
 }
 
 /*# sourceMappingURL=style.css.map */

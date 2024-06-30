@@ -1,7 +1,38 @@
-$primary_1: blue;
-$primary_2: red;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 .main-header {
-    background-color: $primary_1;
-    height: 200px;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    .navbar {
+        background-color: burlywood;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 85%;
+
+        ul {
+            list-style: none;
+
+            li {
+                display: inline-block;
+                font-size: 18px;
+            }
+
+            a {
+                text-decoration: none;
+
+                &:hover {
+                    color: #ff0000;
+                }
+            }
+        }
+    }
 }
