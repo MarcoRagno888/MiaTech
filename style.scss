@@ -1,8 +1,7 @@
+@use './colors' as *;
 $link-size: 18px;
-$link-color: #ff0000;
-$bg-color: #e7e7e7;
-$contact-border-color: #333333;
 $card-width: 400px;
+
 
 * {
     margin: 0;
@@ -37,7 +36,7 @@ $card-width: 400px;
                 text-decoration: none;
 
                 &:hover {
-                    color: $link-color;
+                    color: $link-color; 
                 } 
             }
         }
@@ -65,9 +64,9 @@ $card-width: 400px;
             height: 200px;
             border: 1px solid black;
             margin: 0 30px;
-        }
-        .card:first-child {
-            width: calc($card-width / 3);
+            &:first-child {
+                width: calc($card-width / 3);
+            }
         }
     }
 }
