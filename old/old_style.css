@@ -10,10 +10,14 @@
     box-sizing: border-box;
 }
 
-.fullSize {
-    height: 100%;
-    margin: 0;
-    border: 1px solid black;
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar ul li {
+    display: inline-block;
 }
 
 .grid-template-container {
@@ -77,6 +81,12 @@
     justify-content: center;
     align-items: center;
     height: 500px;
+}
+    
+.fullSize {
+    height: 100%;
+    margin: 0;
+    border: 1px solid black;
 }
 
 .flex-item1 {
@@ -332,7 +342,7 @@ div.three_columns #right {
 }*/
 
 @media screen and (max-width: 768px) {
-    body {
-        background-color: blue;
+    .nav_menu {
+        flex-direction: column;
     }
 }
