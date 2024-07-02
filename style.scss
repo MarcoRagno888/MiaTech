@@ -9,13 +9,14 @@ $card-width: 400px;
     box-sizing: border-box;
 }
 
-.main-header {
+@mixin main-header {
     width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
     padding-top: 20px;
-    padding-bottom: 100px;
+    padding-bottom: 20px;
+    margin-bottom: 100px;
 
 
     .navbar {
@@ -43,8 +44,23 @@ $card-width: 400px;
     }
 }
 
+.main-header-light {
+    @include main-header();
+}
+
+.main-header-dark {
+    @include main-header;
+    background-color: #000000;
+    .navbar ul li a {
+        color: white;
+        &:hover {
+            color: yellow;
+        }
+    }
+}
+
 .contact-btn {
-    @extend .btn;
+    @extend .btn !optional;
     background-color: $bg-color;
     border: 1px solid;
     border-color: $contact-border-color;
