@@ -105,4 +105,73 @@
   background-color: aquamarine;
 }
 
+.boxes {
+  display: flex;
+  gap: 20px;
+}
+.boxes div {
+  width: 150px;
+  height: 150px;
+  position: relative;
+}
+.boxes div:nth-child(1) {
+  background-color: #00b39f;
+}
+.boxes div:nth-child(1)::after {
+  content: "1";
+  position: absolute;
+  background-color: #0000cc;
+  width: 50px;
+  height: 50px;
+  top: 0;
+  left: 0;
+  color: white;
+}
+.boxes div:nth-child(2) {
+  background-color: #00ccb5;
+}
+.boxes div:nth-child(2)::after {
+  content: "2";
+  position: absolute;
+  background-color: #000099;
+  width: 50px;
+  height: 50px;
+  top: 0;
+  left: 0;
+  color: white;
+}
+.boxes div:nth-child(3) {
+  background-color: #00e6cc;
+}
+.boxes div:nth-child(3)::after {
+  content: "3";
+  position: absolute;
+  background-color: #000066;
+  width: 50px;
+  height: 50px;
+  top: 0;
+  left: 0;
+  color: white;
+}
+
+.button-primary {
+  background-color: #098;
+}
+
+.button-secondary {
+  background-color: #fff;
+}
+
+.button-third {
+  background-color: black;
+}
+
+.button-fourth {
+  background-color: purple;
+}
+
+.button-fifth {
+  background-color: blue;
+}
+
 /*# sourceMappingURL=style.css.map */
