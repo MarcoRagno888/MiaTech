@@ -85,6 +85,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 85%;
 }
 .wrapper .container .card {
   width: 400px;
@@ -94,6 +95,14 @@
 }
 .wrapper .container .card:first-child {
   width: 133.3333333333px;
+}
+
+.card-1 {
+  background-color: grey;
+}
+
+.card-2 {
+  background-color: aquamarine;
 }
 
 /*# sourceMappingURL=style.css.map */

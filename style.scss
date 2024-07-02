@@ -1,7 +1,7 @@
 @use './colors' as *;
 $link-size: 18px;
 $card-width: 400px;
-
+$i_div: 0;
 
 * {
     margin: 0;
@@ -37,8 +37,8 @@ $card-width: 400px;
                 text-decoration: none;
 
                 &:hover {
-                    color: $link-color; 
-                } 
+                    color: $link-color;
+                }
             }
         }
     }
@@ -51,8 +51,10 @@ $card-width: 400px;
 .main-header-dark {
     @include main-header;
     background-color: #000000;
+
     .navbar ul li a {
         color: white;
+
         &:hover {
             color: yellow;
         }
@@ -71,15 +73,19 @@ $card-width: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
+
     .container {
         display: flex;
         justify-content: center;
         align-items: center;
+        width: 85%;
+
         .card {
             width: $card-width;
             height: 200px;
             border: 1px solid black;
             margin: 0 30px;
+
             &:first-child {
                 width: calc($card-width / 3);
             }
@@ -87,9 +93,21 @@ $card-width: 400px;
     }
 }
 
-@function em($n, $base: 16px) {
-    @return ($n / $base) * 1em;
+@for $i from 1 to 3 {
+    @if $i ==1 {
+        .card-1 {
+            background-color: grey;
+        }
+    }
+
+    @if $i ==2 {
+        .card-2 {
+            background-color: aquamarine;
+        }
+    }
 }
 
 
-                    
+@function em($n, $base: 16px) {
+    @return ($n / $base) * 1em;
+}
