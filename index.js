@@ -20,7 +20,7 @@ let number = 5;
     console.log(number);
 }
 
-console.log(number);*/
+console.log(number);
 
 let outside = 5;
 
@@ -29,4 +29,10 @@ let outside = 5;
     console.log(outside, inside);
 }
 
-console.log(outside, inside);
+console.log(outside, inside);*/
+
+for (let i = 1; i <= 20; i++){
+    if (i % 2 == 0) {
+        console.log(i);
+    }
+}
