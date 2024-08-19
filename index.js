@@ -35,7 +35,7 @@ for (let i = 1; i <= 20; i++){
     if (i % 2 == 0) {
         console.log(i);
     }
-}*/
+}
 
 
 let cont = 10;
@@ -44,4 +44,6 @@ while (cont != 0) {
         console.log(cont);
     }
     cont --;
-}
+}*/
+
+let word = prompt("Inserisci una parola");
