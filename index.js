@@ -44,8 +44,18 @@ while (cont != 0) {
         console.log(cont);
     }
     cont --;
-}*/
+}
 
 let word = prompt("Inserisci una parola");
 
-console.log(word.length);
+console.log(word.length);*/
+
+let len;
+let word = ""; 
+do {
+    word = prompt("inserisci una parola");
+    len = word.length;
+} while (len < 5);
+
+console.log(word);
+
