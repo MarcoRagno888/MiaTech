@@ -48,7 +48,7 @@ while (cont != 0) {
 
 let word = prompt("Inserisci una parola");
 
-console.log(word.length);*/
+console.log(word.length);
 
 let len;
 let word = ""; 
@@ -57,5 +57,15 @@ do {
     len = word.length;
 } while (len < 5);
 
-console.log(word);
+console.log(word);*/
+
+let number = 10;
+
+{
+    if (number > 5) {
+        console.log("La variabile è maggiore di 5");
+    } else {
+        console.log("La variabile è minore di 5");
+    }
+}
 
