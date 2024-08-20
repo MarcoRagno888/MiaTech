@@ -57,7 +57,7 @@ do {
     len = word.length;
 } while (len < 5);
 
-console.log(word);*/
+console.log(word);
 
 let number = 10;
 
@@ -67,5 +67,17 @@ let number = 10;
     } else {
         console.log("La variabile è minore di 5");
     }
+}*/
+
+let score = parseInt(prompt("Inserisci un numero: "));
+
+if (score <= 59) {
+    console.log("Voto insufficiente");
+} else if (score < 69) {
+    console.log("Voto sufficiente");
+} else if (score < 89) {
+    console.log("Voto buono");
+} else if (score < 100) {
+    console.log("Voto ottimo");
 }
 
