@@ -67,11 +67,11 @@ let number = 10;
     } else {
         console.log("La variabile è minore di 5");
     }
-}*/
+}
 
 let score = parseInt(prompt("Inserisci un numero: "));
 
-/*if (score <= 59) {
+if (score <= 59) {
     console.log("Voto insufficiente");
 } else if (score < 69) {
     console.log("Voto sufficiente");
@@ -79,7 +79,7 @@ let score = parseInt(prompt("Inserisci un numero: "));
     console.log("Voto buono");
 } else if (score < 100) {
     console.log("Voto ottimo");
-}*/
+}
 
 switch (true) {
     case (score >= 90):
@@ -93,5 +93,9 @@ switch (true) {
         break;
     default:
         console.log("Voto insufficiente");
-}
+}*/
+
+let array = [1, 2, 3, 4, 5];
+
+console.log(array);
 
