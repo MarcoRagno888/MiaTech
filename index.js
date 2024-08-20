@@ -93,18 +93,18 @@ switch (true) {
         break;
     default:
         console.log("Voto insufficiente");
-}*/
+}
 
 let array = [1, 2, 3, 4, 5];
 
 //console.log(array);
 
-/*let sum = 0;
+let sum = 0;
 for (let i = 0; i < array.length; i++){
     sum += i;
 }
 
-console.log(`La somma dei numeri all interno dell array è ${sum}`);*/
+console.log(`La somma dei numeri all interno dell array è ${sum}`);
 
 let inverted = [];
 let len = array.length;
@@ -114,7 +114,22 @@ for (let i = 0; i < len; i++){
     cont--;
 }
 
-console.log(`L'array invertito è ${inverted}`);
+console.log(`L'array invertito è ${inverted}`);*/
+
+let parole = [];
+
+for (let i = 1; i <= 5; i++){
+    let word = prompt("Inserisci una parola: ");
+    parole.push(word);
+}
+
+console.log(parole);
+
+for (let i of parole) {
+    if (i.length % 2 != 0){
+        console.log(i);
+    }
+}
 
 
 
