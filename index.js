@@ -99,9 +99,23 @@ let array = [1, 2, 3, 4, 5];
 
 //console.log(array);
 
-let sum = 0;
+/*let sum = 0;
 for (let i = 0; i < array.length; i++){
     sum += i;
 }
 
-console.log(`La somma dei numeri all interno dell array è ${sum}`);
+console.log(`La somma dei numeri all interno dell array è ${sum}`);*/
+
+let inverted = [];
+let len = array.length;
+let cont = len;
+for (let i = 0; i < len; i++){
+    inverted.push(array[cont - 1]);
+    cont--;
+}
+
+console.log(`L'array invertito è ${inverted}`);
+
+
+
+
