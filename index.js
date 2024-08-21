@@ -154,15 +154,19 @@ for (keys in person){
     cont++;
 }*/
 
-function outerFunction (x){
+function outerFunction (x, initialValue){
+    let result = initialValue;
+    
     function innerFunction(y){
-        return x + y;
+        result = result + y;
+        return result;
     }
     return innerFunction;
 }
 
+/* PROVA DELL'ESERCIZIO: FUNZIONI ANNIDATE 1
 let addFive = outerFunction(5);
-console.log(addFive(3)); 
+console.log(addFive(3)); */
 
 
 
