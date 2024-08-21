@@ -141,8 +141,11 @@ let person = {
 
 //console.log(person.age);
 
-person.age = 26;
-console.log(person.age);
+/*person.age = 26;
+console.log(person.age);*/
+
+Object.assign(person, {job : "Web Developer"});
+console.log(person.job);
 
 
 
