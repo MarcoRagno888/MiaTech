@@ -152,7 +152,7 @@ let cont = 0;
 for (keys in person){
     console.log(keys + ": " + valori[cont]);
     cont++;
-}*/
+}
 
 function outerFunction (x, initialValue){
     let result = initialValue;
@@ -164,9 +164,19 @@ function outerFunction (x, initialValue){
     return innerFunction;
 }
 
-/* PROVA DELL'ESERCIZIO: FUNZIONI ANNIDATE 1
+ PROVA DELL'ESERCIZIO: FUNZIONI ANNIDATE 1
 let addFive = outerFunction(5);
 console.log(addFive(3)); */
+
+let student = {
+    name : "Marco Cianci",
+    age : 25,
+    grade : "diploma liceale",
+    school : "Liceo Machiavelli"
+}
+
+let keys = Object.keys(student);
+console.log(keys);
 
 
 
