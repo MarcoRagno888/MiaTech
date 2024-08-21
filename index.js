@@ -176,10 +176,19 @@ let student = {
 }
 
 let keys = Object.keys(student);
-console.log(keys);
+//console.log(keys);
 
 let values = Object.values(student);
-console.log(values);
+//console.log(values);
+
+let couples = Object.entries(student);
+//console.log(couples);
+
+for (let i of couples){
+    let key = i[0];
+    let value= i[1];
+    console.log(key + ": " + value);
+}
 
 
 
