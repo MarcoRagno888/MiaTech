@@ -188,7 +188,7 @@ for (let i of couples){
     let key = i[0];
     let value= i[1];
     console.log(key + ": " + value);
-}*/
+}
 
 let numbers = [1, 2, 3, 4, 5];
 
@@ -206,7 +206,38 @@ let sqauredNumbers2 = numbers.map(function(item){
 })
 
 console.log(sqauredNumbers);
-console.log(sqauredNumbers2);
+console.log(sqauredNumbers2);*/
+
+let students = [
+    {
+        name: "Marco",
+        grade: 66
+    },
+    {
+        name: "Marco",
+        grade: 56
+    },
+    {
+        name: "Marco",
+        grade: 70
+    },
+    {
+        name: "Marco",
+        grade: 55
+    }
+]
+
+let passedStudents = students.filter((item) => {
+    return item.grade > 60;
+})
+
+console.log(passedStudents);
+
+let notPassed = students.find((item) => {
+    return item.grade < 60;
+})
+
+console.log(notPassed);
 
 
 
