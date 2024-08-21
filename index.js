@@ -145,7 +145,16 @@ let person = {
 console.log(person.age);*/
 
 Object.assign(person, {job : "Web Developer"});
-console.log(person.job);
+//console.log(person.job);
+
+let valori = Object.values(person);
+let cont = 0;
+for (keys in person){
+    console.log(keys + ": " + valori[cont]);
+    cont++;
+}
+
+
 
 
 
