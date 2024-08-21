@@ -129,7 +129,7 @@ for (let i of parole) {
     if (i.length % 2 != 0){
         console.log(i);
     }
-}*/
+}
 
 let person = {
     name : "Marco",
@@ -141,8 +141,8 @@ let person = {
 
 //console.log(person.age);
 
-/*person.age = 26;
-console.log(person.age);*/
+person.age = 26;
+console.log(person.age);
 
 Object.assign(person, {job : "Web Developer"});
 //console.log(person.job);
@@ -152,7 +152,19 @@ let cont = 0;
 for (keys in person){
     console.log(keys + ": " + valori[cont]);
     cont++;
+}*/
+
+function outerFunction (x){
+    function innerFunction(y){
+        return x + y;
+    }
+    return innerFunction;
 }
+
+let addFive = outerFunction(5);
+console.log(addFive(3)); 
+
+
 
 
 
