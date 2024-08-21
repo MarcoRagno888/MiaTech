@@ -114,7 +114,7 @@ for (let i = 0; i < len; i++){
     cont--;
 }
 
-console.log(`L'array invertito è ${inverted}`);*/
+console.log(`L'array invertito è ${inverted}`);
 
 let parole = [];
 
@@ -129,7 +129,15 @@ for (let i of parole) {
     if (i.length % 2 != 0){
         console.log(i);
     }
+}*/
+
+let person = {
+    name : "Marco",
+    age : 25,
+    city : "Roma"
 }
+
+console.log(person);
 
 
 
