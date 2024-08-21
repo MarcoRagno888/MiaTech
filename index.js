@@ -206,7 +206,7 @@ let sqauredNumbers2 = numbers.map(function(item){
 })
 
 console.log(sqauredNumbers);
-console.log(sqauredNumbers2);*/
+console.log(sqauredNumbers2);
 
 let students = [
     {
@@ -237,7 +237,23 @@ let notPassed = students.find((item) => {
     return item.grade < 60;
 })
 
-console.log(notPassed);
+console.log(notPassed);*/
+
+let expenses = [10, 20, 22, 32, 50, 1, 6, 78, 89];
+
+let sum = expenses.reduce((accumulator, item) => {
+    return accumulator + item;
+}, 0)
+
+console.log(sum);
+
+let words = ["banana", "apple", "cherry", "date"];
+
+console.log(words);
+
+words.sort();
+
+console.log(words);
 
 
 
