@@ -137,7 +137,9 @@ let person = {
     city : "Roma"
 }
 
-console.log(person);
+//console.log(person);
+
+console.log(person.age);
 
 
 
