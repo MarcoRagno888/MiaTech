@@ -178,6 +178,9 @@ let student = {
 let keys = Object.keys(student);
 console.log(keys);
 
+let values = Object.values(student);
+console.log(values);
+
 
 
 
