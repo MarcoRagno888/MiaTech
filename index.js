@@ -166,7 +166,7 @@ function outerFunction (x, initialValue){
 
  PROVA DELL'ESERCIZIO: FUNZIONI ANNIDATE 1
 let addFive = outerFunction(5);
-console.log(addFive(3)); */
+console.log(addFive(3)); 
 
 let student = {
     name : "Marco Cianci",
@@ -188,7 +188,25 @@ for (let i of couples){
     let key = i[0];
     let value= i[1];
     console.log(key + ": " + value);
-}
+}*/
+
+let numbers = [1, 2, 3, 4, 5];
+
+numbers.forEach((item) => {
+    console.log(item * 2);
+})
+
+let sqauredNumbers = numbers.map((item) => {
+    return item * item;
+})
+
+//Scrittura alternativa
+let sqauredNumbers2 = numbers.map(function(item){
+    return item * item;
+})
+
+console.log(sqauredNumbers);
+console.log(sqauredNumbers2);
 
 
 
