@@ -164,7 +164,14 @@ function outerFunction (x, initialValue){
     return innerFunction;
 }
 
- PROVA DELL'ESERCIZIO: FUNZIONI ANNIDATE 1
+let addTen= outerFunction(1, 10);
+//console.log(addTen);
+
+console.log(outerFunction(1, 10)(5));
+console.log(outerFunction(1, 10)(5));
+
+
+//PROVA DELL'ESERCIZIO: FUNZIONI ANNIDATE 1
 let addFive = outerFunction(5);
 console.log(addFive(3)); 
 
@@ -237,7 +244,7 @@ let notPassed = students.find((item) => {
     return item.grade < 60;
 })
 
-console.log(notPassed);*/
+console.log(notPassed);
 
 let expenses = [10, 20, 22, 32, 50, 1, 6, 78, 89];
 
@@ -253,7 +260,29 @@ console.log(words);
 
 words.sort();
 
-console.log(words);
+console.log(words);*/
+
+function createCounter(){
+    let count = 0;
+    return {
+        increment(){
+            count++;
+            return count;
+        },
+        decrement(){
+            count--;
+            return count;
+        }
+
+    }
+}
+
+let counter = createCounter();
+console.log(counter.increment());
+console.log(counter.increment());
+console.log(counter.increment());
+
+console.log(counter.decrement());
 
 
 
