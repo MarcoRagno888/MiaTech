@@ -324,21 +324,36 @@ class Automobile {
             console.log("Avviso: chilometri superiori a 50k");
         }
     }
+
+    static confrontaChilometraggio(auto1, auto2){
+        let km1 = auto1.chilometraggio;
+        let km2 = auto2.chilometraggio;
+
+        if (km1 > km2) {
+            console.log("L'auto 1 ha piu km");
+        } else if (km1 == km2) {
+            console.log("Le auto hanno gli stessi km");
+        } else {
+            console.log("L'auto 2 ha piu km");
+        }
+    }
 }
 
 const fiat = new Automobile("Fiat", "500", 2015, 10);
+const mercedes = new Automobile("Mercedes", "Classe A", 2020, 8);
+Automobile.confrontaChilometraggio(fiat, mercedes);
 /*fiat.descrizione();
 
 fiat.mostraChilometraggio();
 fiat.aggiungiChilometri(2);
-fiat.mostraChilometraggio();*/
-fiat.mostraEta();
+fiat.mostraChilometraggio();
+fiat.mostraEta();*/
 
 Automobile.prototype.saluta = function(){
     console.log(`${this.marca} ${this.modello}`);
 };
 
-fiat.saluta();
+//fiat.saluta();
 
 class Elettrica extends Automobile {
     autonomia = 0
