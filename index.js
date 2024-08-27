@@ -309,6 +309,15 @@ class Automobile {
     mostraChilometraggio(){
         console.log(this.chilometraggio);
     }
+
+    #calcolaEta(){
+        let calc = 2024 - this.anno;
+        console.log(calc);
+    }
+
+    mostraEta(){
+        this.#calcolaEta();
+    }
 }
 
 const fiat = new Automobile("Fiat", "500", 2015, 10);
@@ -317,6 +326,7 @@ const fiat = new Automobile("Fiat", "500", 2015, 10);
 fiat.mostraChilometraggio();
 fiat.aggiungiChilometri(2);
 fiat.mostraChilometraggio();*/
+fiat.mostraEta();
 
 Automobile.prototype.saluta = function(){
     console.log(`${this.marca} ${this.modello}`);
