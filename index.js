@@ -289,20 +289,35 @@ class Automobile {
     marca = ""
     modello = ""
     anno = 0
+    chilometraggio = 0
 
-    constructor(marca, modello, anno){
+    constructor(marca, modello, anno, chilometraggio){
         this.marca = marca;
         this.modello = modello;
         this. anno = anno;
+        this.chilometraggio = chilometraggio;
     }
 
     descrizione(){
         console.log(`${this.marca} ${this.modello} ${this.anno}`);
     }
+
+    aggiungiChilometri(km){
+        this.chilometraggio += km;
+    }
+
+    mostraChilometraggio(){
+        console.log(this.chilometraggio);
+    }
 }
 
-const fiat = new Automobile("Fiat", "500", 2015);
+const fiat = new Automobile("Fiat", "500", 2015, 10);
 fiat.descrizione();
+
+fiat.mostraChilometraggio();
+fiat.aggiungiChilometri(2);
+fiat.mostraChilometraggio();
+
 
 
 
