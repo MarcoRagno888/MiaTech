@@ -318,6 +318,12 @@ class Automobile {
     mostraEta(){
         this.#calcolaEta();
     }
+
+    _controllaChilometri(){
+        if (this.chilometraggio > 50000){
+            console.log("Avviso: chilometri superiori a 50k");
+        }
+    }
 }
 
 const fiat = new Automobile("Fiat", "500", 2015, 10);
@@ -337,8 +343,8 @@ fiat.saluta();
 class Elettrica extends Automobile {
     autonomia = 0
 
-    constructor(marca, modello, anno, autonomia){
-        super(marca, modello, anno);
+    constructor(marca, modello, anno, chilometraggio, autonomia ){
+        super(marca, modello, anno, chilometraggio);
         this.autonomia = autonomia;
     }
 
@@ -351,13 +357,14 @@ class Elettrica extends Automobile {
     }
 }
 
-const fiatElettrica = new Elettrica("Fiat", "500E", 2015, 60);
+const fiatElettrica = new Elettrica("Fiat", "500E", 2015, 60000, 60);
 
 /*fiatElettrica.descrizione();
 fiatElettrica.ricarica(10);
 fiatElettrica.descrizione();*/
 
 fiatElettrica.saluta();
+fiatElettrica._controllaChilometri();
 
 
 
