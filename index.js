@@ -260,7 +260,7 @@ console.log(words);
 
 words.sort();
 
-console.log(words);*/
+console.log(words);
 
 function createCounter(){
     let count = 0;
@@ -282,7 +282,27 @@ console.log(counter.increment());
 console.log(counter.increment());
 console.log(counter.increment());
 
-console.log(counter.decrement());
+console.log(counter.decrement());*/
+
+
+class Automobile {
+    marca = ""
+    modello = ""
+    anno = 0
+
+    constructor(marca, modello, anno){
+        this.marca = marca;
+        this.modello = modello;
+        this. anno = anno;
+    }
+
+    descrizione(){
+        console.log(`${this.marca} ${this.modello} ${this.anno}`);
+    }
+}
+
+const fiat = new Automobile("Fiat", "500", 2015);
+fiat.descrizione();
 
 
 
