@@ -318,6 +318,29 @@ fiat.mostraChilometraggio();
 fiat.aggiungiChilometri(2);
 fiat.mostraChilometraggio();
 
+class Elettrica extends Automobile {
+    autonomia = 0
+
+    constructor(marca, modello, anno, autonomia){
+        super(marca, modello, anno);
+        this.autonomia = autonomia;
+    }
+
+    descrizione(){
+        console.log(`${this.marca} ${this.modello} ${this.anno} ${this.autonomia}`);
+    }
+
+    ricarica(km){
+        this.autonomia += km;
+    }
+}
+
+const fiatElettrica = new Elettrica("Fiat", "500E", 2015, 60);
+
+fiatElettrica.descrizione();
+fiatElettrica.ricarica(10);
+fiatElettrica.descrizione();
+
 
 
 
