@@ -312,11 +312,17 @@ class Automobile {
 }
 
 const fiat = new Automobile("Fiat", "500", 2015, 10);
-fiat.descrizione();
+/*fiat.descrizione();
 
 fiat.mostraChilometraggio();
 fiat.aggiungiChilometri(2);
-fiat.mostraChilometraggio();
+fiat.mostraChilometraggio();*/
+
+Automobile.prototype.saluta = function(){
+    console.log(`${this.marca} ${this.modello}`);
+};
+
+fiat.saluta();
 
 class Elettrica extends Automobile {
     autonomia = 0
@@ -337,9 +343,11 @@ class Elettrica extends Automobile {
 
 const fiatElettrica = new Elettrica("Fiat", "500E", 2015, 60);
 
-fiatElettrica.descrizione();
+/*fiatElettrica.descrizione();
 fiatElettrica.ricarica(10);
-fiatElettrica.descrizione();
+fiatElettrica.descrizione();*/
+
+fiatElettrica.saluta();
 
 
 
