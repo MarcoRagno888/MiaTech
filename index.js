@@ -349,8 +349,14 @@ class Automobile {
         console.log(this.#contatoreChiamate);
     }
 
-    getChilometri(){
+    get chilometraggio(){
         return this.chilometraggio;
+    }
+
+    set chilometraggio(nuovoChilometraggio){
+        if (nuovoChilometraggio >= this.chilometraggio){
+            this.chilometraggio = nuovoChilometraggio;
+        }
     }
 }
 
@@ -362,11 +368,14 @@ Automobile.confrontaChilometraggio(fiat, mercedes);
 fiat.mostraChilometraggio();
 
 fiat.mostraChilometraggio();
-fiat.mostraEta();*/
+fiat.mostraEta();
 
 fiat.aggiungiChilometri(2);
-fiat.mostraContatoreChiamate();
-console.log(fiat.getChilometri());
+fiat.mostraContatoreChiamate();*/
+console.log(fiat.chilometraggio);
+fiat.chilometraggio = 20;
+console.log(fiat.chilometraggio);
+
 
 Automobile.prototype.saluta = function(){
     console.log(`${this.marca} ${this.modello}`);
