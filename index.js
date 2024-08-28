@@ -339,6 +339,10 @@ class Automobile {
             console.log("L'auto 2 ha piu km");
         }
     }
+
+    #incrementaContatore(){
+        this.#contatoreChiamate += 1;
+    }
 }
 
 const fiat = new Automobile("Fiat", "500", 2015, 10);
