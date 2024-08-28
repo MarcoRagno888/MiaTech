@@ -291,7 +291,7 @@ class Automobile {
     anno = 0
     chilometraggio = 0
 
-    #contatoreChiamate;
+    #contatoreChiamate = 0;
 
     constructor(marca, modello, anno, chilometraggio){
         this.marca = marca;
@@ -344,6 +344,10 @@ class Automobile {
     #incrementaContatore(){
         this.#contatoreChiamate += 1;
     }
+
+    mostraContatoreChiamate(){
+        console.log(this.#contatoreChiamate);
+    }
 }
 
 const fiat = new Automobile("Fiat", "500", 2015, 10);
@@ -352,9 +356,12 @@ Automobile.confrontaChilometraggio(fiat, mercedes);
 /*fiat.descrizione();
 
 fiat.mostraChilometraggio();
-fiat.aggiungiChilometri(2);
+
 fiat.mostraChilometraggio();
 fiat.mostraEta();*/
+
+fiat.aggiungiChilometri(2);
+fiat.mostraContatoreChiamate();
 
 Automobile.prototype.saluta = function(){
     console.log(`${this.marca} ${this.modello}`);
