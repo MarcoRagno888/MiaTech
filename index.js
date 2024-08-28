@@ -363,7 +363,7 @@ class Automobile {
 const fiat = new Automobile("Fiat", "500", 2015, 10);
 const mercedes = new Automobile("Mercedes", "Classe A", 2020, 8);
 Automobile.confrontaChilometraggio(fiat, mercedes);
-/*fiat.descrizione();
+/*console.log(fiat.descrizione());
 
 fiat.mostraChilometraggio();
 
@@ -392,7 +392,7 @@ class Elettrica extends Automobile {
     }
 
     descrizione(){
-        console.log(`${this.marca} ${this.modello} ${this.anno} ${this.autonomia}`);
+        return (`${this.marca} ${this.modello} ${this.anno} ${this.autonomia}`);
     }
 
     ricarica(km){
@@ -404,15 +404,37 @@ const fiatElettrica = new Elettrica("Fiat", "500E", 2015, 60000, 60);
 
 /*fiatElettrica.descrizione();
 fiatElettrica.ricarica(10);
-fiatElettrica.descrizione();*/
+console.log(fiatElettrica.descrizione());*/
 
 fiatElettrica.saluta();
 fiatElettrica._controllaChilometri();
 
 
 class Camion extends Automobile {
-    
+    caricoMassimo = 0;
+    carico = 0;
+
+    constructor(marca, modello, anno, chilometraggio, caricoMassimo, carico){
+        super(marca, modello, anno, chilometraggio);
+        this.caricoMassimo = caricoMassimo;
+        this.carico = carico;
+    }
+
+    descrizione(){
+        return (`${this.marca} ${this.modello} ${this.anno} ${this.chilometraggio} ${this.caricoMassimo} ${this.carico}`);
+    }
+
+    carica(kg) {
+        if ((kg+this.carico) <= this.caricoMassimo){
+            this.carico += kg;
+        }
+    }
 }
+
+const tir = new Camion("Mercedes", "Tir", 1998, 100000, 2000, 1700);
+console.log(tir.descrizione());
+tir.carica(100);
+console.log(tir.descrizione());
 
 
 
