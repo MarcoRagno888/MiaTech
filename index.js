@@ -358,6 +358,12 @@ class Automobile {
             this.chilometraggio = nuovoChilometraggio;
         }
     }
+
+    static verificaIstanza(obj,classe){
+        if (obj instanceof classe){
+            console.log("L'oggetto è stato creato dalla classe");
+        } else {console.log("L'oggetto NON è stato creato dalla classe")}
+    }
 }
 
 const fiat = new Automobile("Fiat", "500", 2015, 10);
@@ -435,6 +441,12 @@ const tir = new Camion("Mercedes", "Tir", 1998, 100000, 2000, 1700);
 console.log(tir.descrizione());
 tir.carica(100);
 console.log(tir.descrizione());
+
+console.log(fiat instanceof Automobile);
+console.log(tir instanceof Camion);
+console.log(tir instanceof Automobile);
+Automobile.verificaIstanza(tir, Camion);
+Automobile.verificaIstanza(tir, Automobile);
 
 
 
