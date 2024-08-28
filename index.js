@@ -348,6 +348,10 @@ class Automobile {
     mostraContatoreChiamate(){
         console.log(this.#contatoreChiamate);
     }
+
+    getChilometri(){
+        return this.chilometraggio;
+    }
 }
 
 const fiat = new Automobile("Fiat", "500", 2015, 10);
@@ -362,6 +366,7 @@ fiat.mostraEta();*/
 
 fiat.aggiungiChilometri(2);
 fiat.mostraContatoreChiamate();
+console.log(fiat.getChilometri());
 
 Automobile.prototype.saluta = function(){
     console.log(`${this.marca} ${this.modello}`);
