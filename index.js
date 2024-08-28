@@ -291,6 +291,8 @@ class Automobile {
     anno = 0
     chilometraggio = 0
 
+    #contatoreChiamate;
+
     constructor(marca, modello, anno, chilometraggio){
         this.marca = marca;
         this.modello = modello;
