@@ -410,6 +410,11 @@ fiatElettrica.saluta();
 fiatElettrica._controllaChilometri();
 
 
+class Camion extends Automobile {
+    
+}
+
+
 
 
 
