@@ -282,7 +282,7 @@ console.log(counter.increment());
 console.log(counter.increment());
 console.log(counter.increment());
 
-console.log(counter.decrement());*/
+console.log(counter.decrement());
 
 
 class Automobile {
@@ -369,7 +369,7 @@ class Automobile {
 const fiat = new Automobile("Fiat", "500", 2015, 10);
 const mercedes = new Automobile("Mercedes", "Classe A", 2020, 8);
 Automobile.confrontaChilometraggio(fiat, mercedes);
-/*console.log(fiat.descrizione());
+console.log(fiat.descrizione());
 
 fiat.mostraChilometraggio();
 
@@ -377,7 +377,7 @@ fiat.mostraChilometraggio();
 fiat.mostraEta();
 
 fiat.aggiungiChilometri(2);
-fiat.mostraContatoreChiamate();*/
+fiat.mostraContatoreChiamate();
 console.log(fiat.chilometraggio);
 fiat.chilometraggio = 20;
 console.log(fiat.chilometraggio);
@@ -408,9 +408,9 @@ class Elettrica extends Automobile {
 
 const fiatElettrica = new Elettrica("Fiat", "500E", 2015, 60000, 60);
 
-/*fiatElettrica.descrizione();
+fiatElettrica.descrizione();
 fiatElettrica.ricarica(10);
-console.log(fiatElettrica.descrizione());*/
+console.log(fiatElettrica.descrizione());
 
 fiatElettrica.saluta();
 fiatElettrica._controllaChilometri();
@@ -446,13 +446,12 @@ console.log(fiat instanceof Automobile);
 console.log(tir instanceof Camion);
 console.log(tir instanceof Automobile);
 Automobile.verificaIstanza(tir, Camion);
-Automobile.verificaIstanza(tir, Automobile);
+Automobile.verificaIstanza(tir, Automobile);*/
 
 
+let numbersArray = [1, 2, 3, 4, 5];
 
+let [numero1, numero2] = numbersArray;
 
-
-
-
-
-
+console.log(numero1);
+console.log(numero2);
