@@ -478,5 +478,11 @@ let ArrayRestCopiato = [...ArrayRest];
 
 ArrayRest[4] = 1;
 
-console.log(ArrayRest, ArrayRestCopiato);
+//console.log(ArrayRest, ArrayRestCopiato);
+
+let ArrayRest2 = [1, 1, 1];
+
+let ArrayRestUnito = [...ArrayRest, ...ArrayRest2];
+
+console.log(ArrayRestUnito);
 
