@@ -460,7 +460,7 @@ let lessThanFive = [1, 2, 3];
 
 let [num1, num2, num3, num4=1, num5=1] = lessThanFive;
 
-console.log(num1, num2, num3, num4, num5);*/
+console.log(num1, num2, num3, num4, num5);
 
 let ogg = {
     nome : "Marco",
@@ -470,4 +470,13 @@ let ogg = {
 
 let {nome: n, cognome: c, mansione = "Web Dev"} = ogg;
 
-console.log(n, c, mansione);
+console.log(n, c, mansione);*/
+
+let ArrayRest = [1, 2, 3, 4, 5];
+
+let ArrayRestCopiato = [...ArrayRest];
+
+ArrayRest[4] = 1;
+
+console.log(ArrayRest, ArrayRestCopiato);
+
