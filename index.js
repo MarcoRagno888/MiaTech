@@ -484,7 +484,7 @@ let ArrayRest2 = [1, 1, 1];
 
 let ArrayRestUnito = [...ArrayRest, ...ArrayRest2];
 
-console.log(ArrayRestUnito);*/
+console.log(ArrayRestUnito);
 
 let ogg = {
     nome : "Marco",
@@ -493,5 +493,17 @@ let ogg = {
 }
 
 let ogg2 = {...ogg, mansione : "Web Dev"};
-console.log(ogg2);
+console.log(ogg2);*/
+
+let sommaNumeri = (...numbers) => {
+    let somma = 0;
+    numbers.forEach((item) => {
+        somma += item;
+    }) 
+    return somma;
+}
+
+console.log(sommaNumeri(1, 1, 1, 1, 1)); //5
+console.log(sommaNumeri(1, 1, 1)); //3
+
 
