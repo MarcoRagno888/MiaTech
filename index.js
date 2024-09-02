@@ -451,7 +451,7 @@ Automobile.verificaIstanza(tir, Automobile);*/
 
 let numbersArray = [1, 2, 3, 4, 5];
 
-let [numero1, numero2] = numbersArray;
+let [numero1, ,numero2] = numbersArray;
 
 console.log(numero1);
 console.log(numero2);
