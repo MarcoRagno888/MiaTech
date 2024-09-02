@@ -470,7 +470,7 @@ let ogg = {
 
 let {nome: n, cognome: c, mansione = "Web Dev"} = ogg;
 
-console.log(n, c, mansione);*/
+console.log(n, c, mansione);
 
 let ArrayRest = [1, 2, 3, 4, 5];
 
@@ -484,5 +484,14 @@ let ArrayRest2 = [1, 1, 1];
 
 let ArrayRestUnito = [...ArrayRest, ...ArrayRest2];
 
-console.log(ArrayRestUnito);
+console.log(ArrayRestUnito);*/
+
+let ogg = {
+    nome : "Marco",
+    cognome : "Cianci",
+    eta : 25
+}
+
+let ogg2 = {...ogg, mansione : "Web Dev"};
+console.log(ogg2);
 
