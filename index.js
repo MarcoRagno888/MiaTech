@@ -468,6 +468,6 @@ let ogg = {
     eta : 25
 }
 
-let {nome: n, cognome: c} = ogg;
+let {nome: n, cognome: c, mansione = "Web Dev"} = ogg;
 
-console.log(n, c);
+console.log(n, c, mansione);
