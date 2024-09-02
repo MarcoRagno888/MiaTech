@@ -468,6 +468,6 @@ let ogg = {
     eta : 25
 }
 
-let {nome, cognome} = ogg;
+let {nome: n, cognome: c} = ogg;
 
-console.log(nome, cognome);
+console.log(n, c);
