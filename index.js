@@ -454,10 +454,20 @@ let numbersArray = [1, 2, 3, 4, 5];
 let [numero1, ,numero2] = numbersArray;
 
 console.log(numero1);
-console.log(numero2);*/
+console.log(numero2);
 
 let lessThanFive = [1, 2, 3];
 
 let [num1, num2, num3, num4=1, num5=1] = lessThanFive;
 
-console.log(num1, num2, num3, num4, num5);
+console.log(num1, num2, num3, num4, num5);*/
+
+let ogg = {
+    nome : "Marco",
+    cognome : "Cianci",
+    eta : 25
+}
+
+let {nome, cognome} = ogg;
+
+console.log(nome, cognome);
