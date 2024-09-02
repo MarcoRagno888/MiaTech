@@ -493,7 +493,7 @@ let ogg = {
 }
 
 let ogg2 = {...ogg, mansione : "Web Dev"};
-console.log(ogg2);*/
+console.log(ogg2);
 
 let sommaNumeri = (...numbers) => {
     let somma = 0;
@@ -504,6 +504,13 @@ let sommaNumeri = (...numbers) => {
 }
 
 console.log(sommaNumeri(1, 1, 1, 1, 1)); //5
-console.log(sommaNumeri(1, 1, 1)); //3
+console.log(sommaNumeri(1, 1, 1)); //3*/
+
+let VariabiliERest = [1, 2, 3, 4, 5];
+
+let [n1, n2, ...rest] = VariabiliERest;
+
+console.log(n1, n2, rest);
+
 
 
