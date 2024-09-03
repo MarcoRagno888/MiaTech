@@ -31,7 +31,7 @@ let outside = 5;
 
 console.log(outside, inside);
 
-for (let i = 1; i <= 20; i++){
+for (let i = 0; i <= 20; i++){
     if (i % 2 == 0) {
         console.log(i);
     }
@@ -534,10 +534,15 @@ let ogg = {
 
 let json = JSON.stringify(ogg);
 
-console.log(json);*/
+console.log(json);
 
 let a = "[1, 2, 3]";
 
 a = JSON.parse(a);
 
-console.log(a);
+console.log(a);*/
+
+//let persone = [{"nome" : "Marco","eta" : 25},{"nome" : "Luca","eta" : 30}];
+
+//persone = JSON.parse(persone);
+//console.log(persone);
