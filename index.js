@@ -301,7 +301,7 @@ class Automobile {
     }
 
     descrizione(){
-        console.log(`${this.marca} ${this.modello} ${this.anno}`);
+        return `${this.marca} ${this.modello} ${this.anno}`;
     }
 
     aggiungiChilometri(km){
@@ -384,7 +384,7 @@ console.log(fiat.chilometraggio);
 
 
 Automobile.prototype.saluta = function(){
-    return (`${this.marca} ${this.modello}`);
+    return `${this.marca} ${this.modello}`;
 };
 
 //fiat.saluta();
@@ -398,7 +398,7 @@ class Elettrica extends Automobile {
     }
 
     descrizione(){
-        return (`${this.marca} ${this.modello} ${this.anno} ${this.autonomia}`);
+        return `${this.marca} ${this.modello} ${this.anno} ${this.autonomia}`;
     }
 
     ricarica(km){
@@ -427,7 +427,7 @@ class Camion extends Automobile {
     }
 
     descrizione(){
-        return (`${this.marca} ${this.modello} ${this.anno} ${this.chilometraggio} ${this.caricoMassimo} ${this.carico}`);
+        return `${this.marca} ${this.modello} ${this.anno} ${this.chilometraggio} ${this.caricoMassimo} ${this.carico}`;
     }
 
     carica(kg) {
