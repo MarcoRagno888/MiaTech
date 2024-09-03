@@ -540,9 +540,15 @@ let a = "[1, 2, 3]";
 
 a = JSON.parse(a);
 
-console.log(a);
+console.log(a);*/
 
-//let persone = [{"nome" : "Marco","eta" : 25},{"nome" : "Luca","eta" : 30}];
+let persone = '[{"nome" : "Marco", "eta" : 25},{"nome" : "Luca", "eta" : 30}]';
 
-//persone = JSON.parse(persone);
-//console.log(persone);*/
+persone = JSON.parse(persone);
+console.log(persone);
+
+let nuovaPersona = {nome : "Lucia", eta : 20};
+persone.push(nuovaPersona);
+
+persone = JSON.stringify(persone);
+console.log(persone);
