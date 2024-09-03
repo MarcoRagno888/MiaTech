@@ -522,7 +522,7 @@ let ogg = {
 }                                                    `
 
 let {nome, cognome, ...rest} = ogg;
-console.log(nome, cognome, rest);*/
+console.log(nome, cognome, rest);
 
 let ogg = {
     nome : "Marco",
@@ -534,4 +534,10 @@ let ogg = {
 
 let json = JSON.stringify(ogg);
 
-console.log(json);
+console.log(json);*/
+
+let a = "[1, 2, 3]";
+
+a = JSON.parse(a);
+
+console.log(a);
