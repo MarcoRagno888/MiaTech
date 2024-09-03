@@ -310,7 +310,7 @@ class Automobile {
     }
 
     mostraChilometraggio(){
-        console.log(this.chilometraggio);
+        return this.chilometraggio;
     }
 
     #calcolaEta(){
@@ -371,9 +371,9 @@ const mercedes = new Automobile("Mercedes", "Classe A", 2020, 8);
 Automobile.confrontaChilometraggio(fiat, mercedes);
 console.log(fiat.descrizione());
 
-fiat.mostraChilometraggio();
+console.log(fiat.mostraChilometraggio());
 
-fiat.mostraChilometraggio();
+console.log(fiat.mostraChilometraggio());
 fiat.mostraEta();
 
 fiat.aggiungiChilometri(2);
