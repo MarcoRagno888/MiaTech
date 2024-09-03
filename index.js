@@ -384,7 +384,7 @@ console.log(fiat.chilometraggio);
 
 
 Automobile.prototype.saluta = function(){
-    console.log(`${this.marca} ${this.modello}`);
+    return (`${this.marca} ${this.modello}`);
 };
 
 //fiat.saluta();
