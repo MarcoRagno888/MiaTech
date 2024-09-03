@@ -101,7 +101,7 @@ let array = [1, 2, 3, 4, 5];
 
 let sum = 0;
 for (let i = 0; i < array.length; i++){
-    sum += i;
+    sum += array[i];
 }
 
 console.log(`La somma dei numeri all interno dell array è ${sum}`);
@@ -540,9 +540,9 @@ let a = "[1, 2, 3]";
 
 a = JSON.parse(a);
 
-console.log(a);*/
+console.log(a);
 
 //let persone = [{"nome" : "Marco","eta" : 25},{"nome" : "Luca","eta" : 30}];
 
 //persone = JSON.parse(persone);
-//console.log(persone);
+//console.log(persone);*/
