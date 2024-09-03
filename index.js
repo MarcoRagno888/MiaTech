@@ -510,7 +510,7 @@ let VariabiliERest = [1, 2, 3, 4, 5];
 
 let [n1, n2, ...rest] = VariabiliERest;
 
-console.log(n1, n2, rest);*/
+console.log(n1, n2, rest);
 
 let ogg = {
     nome : "Marco",
@@ -519,7 +519,19 @@ let ogg = {
     mansione : "Web Dev",
     città : "Roma",
     CAP : "00162"
-}
+}                                                    `
 
 let {nome, cognome, ...rest} = ogg;
-console.log(nome, cognome, rest);
+console.log(nome, cognome, rest);*/
+
+let ogg = {
+    nome : "Marco",
+    cognome : "Cianci",
+    eta : 25,
+    mansione : "Web Dev",
+    città : "Roma"
+}  
+
+let json = JSON.stringify(ogg);
+
+console.log(json);
