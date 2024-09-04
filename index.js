@@ -622,8 +622,23 @@ function mex () {
 
 setTimeout(mex, 5000);
 
-setInterval(mex, 2000);*/
+setInterval(mex, 2000);
 
 let int = setInterval(() => console.log("Messaggio"), 1000);
 
-setTimeout(() => {clearInterval(int)}, 5000);
+setTimeout(() => {clearInterval(int)}, 5000);*/
+
+function dividi (a,b) {
+    try {
+        if (b === 0) {
+            new error;
+        }
+        let n = a/b;
+        console.log(`Il risultato è: ${n}`);
+    } catch (error) {
+        console.error("Error: il divisore non può essere zero");
+    }
+}
+
+dividi(10,0);
+dividi(10,2);
