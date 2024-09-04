@@ -606,3 +606,12 @@ if (numC > 10) {
 } else if (numC <= 10) {
     console.warn("Numero potrebb essere meglio")
 };
+
+console.table(oggC);
+
+console.log("Messaggio all'esterno del gruppo");
+console.group();
+console.log("Primo messaggio del gruppo");
+console.log("Secondo messaggio del gruppo");
+console.groupEnd();
+console.log("Messaggio all'esterno dal gruppo");
