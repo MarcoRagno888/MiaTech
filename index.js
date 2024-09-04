@@ -614,7 +614,7 @@ console.group();
 console.log("Primo messaggio del gruppo");
 console.log("Secondo messaggio del gruppo");
 console.groupEnd();
-console.log("Messaggio all'esterno dal gruppo");*/
+console.log("Messaggio all'esterno dal gruppo");
 
 function mex () {
     console.log("Ciao Mondo!");
@@ -622,4 +622,8 @@ function mex () {
 
 setTimeout(mex, 5000);
 
-setInterval(mex, 2000);
+setInterval(mex, 2000);*/
+
+let int = setInterval(() => console.log("Messaggio"), 1000);
+
+setTimeout(() => {clearInterval(int)}, 5000);
