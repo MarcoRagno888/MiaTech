@@ -600,3 +600,9 @@ let oggC = {
 let boolC = true;
 
 console.log(numC, strC, arrayC, oggC, boolC);
+
+if (numC > 10) {
+    console.error("Numero troppo alto")
+} else if (numC <= 10) {
+    console.warn("Numero potrebb essere meglio")
+};
