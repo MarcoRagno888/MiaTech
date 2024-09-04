@@ -570,7 +570,7 @@ Cognome: ${cognomeL}
 Età: ${etaL} 
 Città: ${cittaL}`;
 
-console.log(strMultilinea);*/
+console.log(strMultilinea);
 
 let funzioneLiteral = (ogettoPersona) => {
     let str =
@@ -588,4 +588,15 @@ let personaLiteral = {
     citta: "Roma"
 }
 
-console.log(funzioneLiteral(personaLiteral));
+console.log(funzioneLiteral(personaLiteral));*/
+
+let numC = 10;
+let strC = "Prova";
+let arrayC = [1, 2, 3, 4, 5];
+let oggC = {
+    prova1: "Prova",
+    prova2: "Stampa"
+}
+let boolC = true;
+
+console.log(numC, strC, arrayC, oggC, boolC);
