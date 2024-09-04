@@ -557,6 +557,17 @@ let nomeL = "Marco";
 
 let cognomeL = "Cianci";
 
+let etaL = 25;
+
+let cittaL = "Roma";
+
 let nomeEcogome = `Il nome completo è ${nomeL} ${cognomeL}`;
 
 console.log(nomeEcogome);
+
+let strMultilinea = `Nome: ${nomeL} 
+Cognome: ${cognomeL} 
+Età: ${etaL} 
+Città: ${cittaL}`;
+
+console.log(strMultilinea);
