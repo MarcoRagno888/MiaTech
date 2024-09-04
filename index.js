@@ -551,7 +551,7 @@ let nuovaPersona = {nome : "Lucia", eta : 20};
 persone.push(nuovaPersona);
 
 persone = JSON.stringify(persone);
-console.log(persone);*/
+console.log(persone);
 
 let nomeL = "Marco";
 
@@ -570,4 +570,22 @@ Cognome: ${cognomeL}
 Età: ${etaL} 
 Città: ${cittaL}`;
 
-console.log(strMultilinea);
+console.log(strMultilinea);*/
+
+let funzioneLiteral = (ogettoPersona) => {
+    let str =
+        `Nome: ${ogettoPersona.nome}
+Cognome: ${ogettoPersona.cognome}
+Età: ${ogettoPersona.eta}
+Città: ${ogettoPersona.citta}`
+    return str;
+}
+
+let personaLiteral = {
+    nome: "Marco",
+    cognome: "Cianci",
+    eta: 25,
+    citta: "Roma"
+}
+
+console.log(funzioneLiteral(personaLiteral));
