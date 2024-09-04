@@ -519,7 +519,7 @@ let ogg = {
     mansione : "Web Dev",
     città : "Roma",
     CAP : "00162"
-}                                                    `
+}                                                    
 
 let {nome, cognome, ...rest} = ogg;
 console.log(nome, cognome, rest);
@@ -540,7 +540,7 @@ let a = "[1, 2, 3]";
 
 a = JSON.parse(a);
 
-console.log(a);*/
+console.log(a);
 
 let persone = '[{"nome" : "Marco", "eta" : 25},{"nome" : "Luca", "eta" : 30}]';
 
@@ -551,4 +551,12 @@ let nuovaPersona = {nome : "Lucia", eta : 20};
 persone.push(nuovaPersona);
 
 persone = JSON.stringify(persone);
-console.log(persone);
+console.log(persone);*/
+
+let nomeL = "Marco";
+
+let cognomeL = "Cianci";
+
+let nomeEcogome = `Il nome completo è ${nomeL} ${cognomeL}`;
+
+console.log(nomeEcogome);
