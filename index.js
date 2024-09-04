@@ -621,3 +621,5 @@ function mex () {
 }
 
 setTimeout(mex, 5000);
+
+setInterval(mex, 2000);
