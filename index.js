@@ -588,7 +588,7 @@ let personaLiteral = {
     citta: "Roma"
 }
 
-console.log(funzioneLiteral(personaLiteral));*/
+console.log(funzioneLiteral(personaLiteral));
 
 let numC = 10;
 let strC = "Prova";
@@ -614,4 +614,10 @@ console.group();
 console.log("Primo messaggio del gruppo");
 console.log("Secondo messaggio del gruppo");
 console.groupEnd();
-console.log("Messaggio all'esterno dal gruppo");
+console.log("Messaggio all'esterno dal gruppo");*/
+
+function mex () {
+    console.log("Ciao Mondo!");
+}
+
+setTimeout(mex, 5000);
