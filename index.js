@@ -626,19 +626,39 @@ setInterval(mex, 2000);
 
 let int = setInterval(() => console.log("Messaggio"), 1000);
 
-setTimeout(() => {clearInterval(int)}, 5000);*/
+setTimeout(() => {clearInterval(int)}, 5000);
 
 function dividi (a,b) {
     try {
         if (b === 0) {
-            new error;
+            throw new Error("Il divisore è uguale a zero");
         }
         let n = a/b;
         console.log(`Il risultato è: ${n}`);
     } catch (error) {
-        console.error("Error: il divisore non può essere zero");
+        console.error(error.message);
     }
 }
 
 dividi(10,0);
-dividi(10,2);
+dividi(10,2);*/
+
+function maiusc(str) {
+    console.log(str);
+    try {
+        if (typeof str != "string") {
+            throw new TypeError("La variabile non è una stringa");
+        }
+        if (!str) {
+            throw new Error("Errore generico");
+        }
+        let newS = str.toUpperCase();
+        return `La stringa in maiuscolo è ${newS}`;
+    } catch (error) {
+        console.error(error.message);
+    }
+}
+
+let stringa = "aa";
+console.log(maiusc(stringa));
+maiusc(2);
