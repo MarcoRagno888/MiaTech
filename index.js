@@ -641,7 +641,7 @@ function dividi (a,b) {
 }
 
 dividi(10,0);
-dividi(10,2);*/
+dividi(10,2);
 
 function maiusc(str) {
     console.log(str);
@@ -661,4 +661,16 @@ function maiusc(str) {
 
 let stringa = "aa";
 console.log(maiusc(stringa));
-maiusc(2);
+maiusc(2);*/
+
+function fine () {
+    try {
+        console.log("Ok");
+    } catch (e) {
+        console.log(e.message)
+    } finally {
+        console.log("Operazione completata");
+    }
+}
+
+fine();
