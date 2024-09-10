@@ -714,12 +714,7 @@ primaOperazione(5, 3, (risultato) => {
     secondaOperazione(risultato, () => {
         console.log("Callback finale eseguito");
     });
-});*/
-
-/**
- * Creare una funzione che restituisca una promessa che si risolve dopo 2 secondi con un messaggio. 
- * Utilizzare then per stampare il messaggio quando la promessa viene risolta.
- */
+});
 
 function ritarda(condizione) {
     return new Promise((risolvi, rifiuta) => {
@@ -737,4 +732,20 @@ ritarda(false).then((mex) => {
     console.log(mex);
 }).catch((errore) => {
     console.error(errore)
+});*/
+
+let promessa = new Promise ((resolve, reject) => {
+    let ok = false;
+
+    if (ok) {
+        resolve("Fatto")
+    } else {
+        reject("Errore")
+    }
 });
+
+promessa.then ((risultato) => {
+    console.log(risultato)
+}).catch((err) => {
+    console.error(err)
+}).finally (console.log("Operazione conclusa"));
