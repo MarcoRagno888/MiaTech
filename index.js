@@ -721,14 +721,20 @@ primaOperazione(5, 3, (risultato) => {
  * Utilizzare then per stampare il messaggio quando la promessa viene risolta.
  */
 
-function ritarda() {
-    return new Promise(() => {
+function ritarda(condizione) {
+    return new Promise((risolvi, rifiuta) => {
         setTimeout(() => {
-            console.log("Messaggio");
+            if (condizione) {
+                risolvi("Messaggio");
+            } else {
+                rifiuta("Errore");
+            }
         }, 2000);
     });
 }
 
-ritarda().then((mex) => {
+ritarda(false).then((mex) => {
     console.log(mex);
+}).catch((errore) => {
+    console.error(errore)
 });
