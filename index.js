@@ -773,7 +773,7 @@ promessaNumero.then((val) => {
     return val + 3;
 }).then((val) => {
     console.log(val)
-})*/
+})
 
 function promiseNumeroCasuale () {
     return new Promise ((resolve, reject) => {
@@ -791,4 +791,18 @@ promiseNumeroCasuale().then((val) => {
     console.log(val)
 }).catch((err) => {
     console.error("Errore")
+})*/
+
+function promiseErrore () {
+    return new Promise ((resolve, reject) => {
+        let ok = false;
+
+        if (ok == false) {
+            reject(new Error("Errore"));
+        }
+    })
+}
+
+promiseErrore().catch(err => {
+    console.error(err.message);
 })
