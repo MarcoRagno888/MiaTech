@@ -681,18 +681,22 @@ function eseguiOperazione(a, b, callback) {
     callback();
 }
 
-eseguiOperazione(5, 3, function() {
+eseguiOperazione(5, 3, () => {
     console.log("Callback eseguito");
 });
+
+//-----------------------------
 
 function eseguiOperazione(a, b, callback) {
     let risultato = a + b;
     callback(risultato);
 }
 
-eseguiOperazione(5, 3, function(risultato) {
+eseguiOperazione(5, 3, (risultato) => {
     console.log("Risultato della somma:", risultato);
-});*/
+});
+
+//-------------------------------
 
 function primaOperazione(a, b, callback) {
     let risultato = a + b;
@@ -706,8 +710,25 @@ function secondaOperazione(risultato, callback) {
     callback();
 }
 
-primaOperazione(5, 3, function(risultato) {
-    secondaOperazione(risultato, function() {
+primaOperazione(5, 3, (risultato) => {
+    secondaOperazione(risultato, () => {
         console.log("Callback finale eseguito");
     });
+});*/
+
+/**
+ * Creare una funzione che restituisca una promessa che si risolve dopo 2 secondi con un messaggio. 
+ * Utilizzare then per stampare il messaggio quando la promessa viene risolta.
+ */
+
+function ritarda() {
+    return new Promise(() => {
+        setTimeout(() => {
+            console.log("Messaggio");
+        }, 2000);
+    });
+}
+
+ritarda().then((mex) => {
+    console.log(mex);
 });
