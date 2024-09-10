@@ -673,7 +673,7 @@ function fine () {
     }
 }
 
-fine();*/
+fine();
 
 function eseguiOperazione(a, b, callback) {
     let risultato = a + b;
@@ -683,4 +683,13 @@ function eseguiOperazione(a, b, callback) {
 
 eseguiOperazione(5, 3, function() {
     console.log("Callback eseguito");
+});*/
+
+function eseguiOperazione(a, b, callback) {
+    let risultato = a + b;
+    callback(risultato);
+}
+
+eseguiOperazione(5, 3, function(risultato) {
+    console.log("Risultato della somma:", risultato);
 });
