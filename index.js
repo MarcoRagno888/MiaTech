@@ -683,7 +683,7 @@ function eseguiOperazione(a, b, callback) {
 
 eseguiOperazione(5, 3, function() {
     console.log("Callback eseguito");
-});*/
+});
 
 function eseguiOperazione(a, b, callback) {
     let risultato = a + b;
@@ -692,4 +692,22 @@ function eseguiOperazione(a, b, callback) {
 
 eseguiOperazione(5, 3, function(risultato) {
     console.log("Risultato della somma:", risultato);
+});*/
+
+function primaOperazione(a, b, callback) {
+    let risultato = a + b;
+    console.log("Risultato della prima operazione:", risultato);
+    callback(risultato);
+}
+
+function secondaOperazione(risultato, callback) {
+    let nuovoRisultato = risultato * 2;
+    console.log("Risultato della seconda operazione:", nuovoRisultato);
+    callback();
+}
+
+primaOperazione(5, 3, function(risultato) {
+    secondaOperazione(risultato, function() {
+        console.log("Callback finale eseguito");
+    });
 });
