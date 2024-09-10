@@ -661,7 +661,7 @@ function maiusc(str) {
 
 let stringa = "aa";
 console.log(maiusc(stringa));
-maiusc(2);*/
+maiusc(2);
 
 function fine () {
     try {
@@ -673,4 +673,14 @@ function fine () {
     }
 }
 
-fine();
+fine();*/
+
+function eseguiOperazione(a, b, callback) {
+    let risultato = a + b;
+    console.log("Risultato della somma:", risultato);
+    callback();
+}
+
+eseguiOperazione(5, 3, function() {
+    console.log("Callback eseguito");
+});
