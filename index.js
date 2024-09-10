@@ -795,14 +795,18 @@ promiseNumeroCasuale().then((val) => {
 
 function promiseErrore () {
     return new Promise ((resolve, reject) => {
-        let ok = false;
+        let ok = true;
 
         if (ok == false) {
             reject(new Error("Errore"));
+        } else {
+            resolve("Successo")
         }
     })
 }
 
 promiseErrore().catch(err => {
     console.error(err.message);
+}).then((mex) => {
+    console.log(mex)
 })
