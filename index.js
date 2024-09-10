@@ -809,7 +809,7 @@ promiseErrore().catch(err => {
     console.error(err.message);
 }).then((mex) => {
     console.log(mex)
-})*/
+})
 
 function prima() {
     return new Promise ((resolve) => {
@@ -827,10 +827,54 @@ function seconda() {
     })
 } 
 
-/*Promise.all([prima(), seconda()]).then((val) => {
+Promise.all([prima(), seconda()]).then((val) => {
     console.log(val);
-})*/
+})
 
 Promise.race([prima(), seconda()]).then((val) => {
     console.log(val);
+})*/
+
+function promiseAllSettled1 () {
+    return new Promise ((resolve, reject) => {
+        let ok = true;
+
+        if (ok == false) {
+            reject(new Error("Errore"));
+        } else {
+            resolve("Successo")
+        }
+    })
+}
+
+function promiseAllSettled2 () {
+    return new Promise ((resolve, reject) => {
+        let ok = true;
+
+        if (ok == false) {
+            reject(new Error("Errore"));
+        } else {
+            resolve("Successo")
+        }
+    })
+}
+
+function promiseAllSettled3 () {
+    return new Promise ((resolve, reject) => {
+        let ok = false;
+
+        if (ok == false) {
+            reject(new Error("Errore"));
+        } else {
+            resolve("Successo")
+        }
+    })
+}
+
+let promises = [promiseAllSettled1(), promiseAllSettled2(), promiseAllSettled3()];
+
+Promise.allSettled(promises).then((risultato) => {
+    risultato.forEach((risultato) => {
+        console.log(risultato)
+    })
 })
