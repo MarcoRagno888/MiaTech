@@ -791,7 +791,7 @@ promiseNumeroCasuale().then((val) => {
     console.log(val)
 }).catch((err) => {
     console.error("Errore")
-})*/
+})
 
 function promiseErrore () {
     return new Promise ((resolve, reject) => {
@@ -809,4 +809,24 @@ promiseErrore().catch(err => {
     console.error(err.message);
 }).then((mex) => {
     console.log(mex)
+})*/
+
+function prima() {
+    return new Promise ((resolve) => {
+        setTimeout(() => {
+            resolve(1);
+        }, 1000);
+    })
+} 
+
+function seconda() {
+    return new Promise ((resolve) => {
+        setTimeout(() => {
+            resolve(10);
+        }, 5000);
+    })
+} 
+
+Promise.all([prima(), seconda()]).then((val) => {
+    console.log(val);
 })
