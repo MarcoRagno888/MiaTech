@@ -827,6 +827,10 @@ function seconda() {
     })
 } 
 
-Promise.all([prima(), seconda()]).then((val) => {
+/*Promise.all([prima(), seconda()]).then((val) => {
+    console.log(val);
+})*/
+
+Promise.race([prima(), seconda()]).then((val) => {
     console.log(val);
 })
