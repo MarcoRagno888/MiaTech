@@ -757,10 +757,19 @@ let promessaNumero = new Promise ((resolve) => {
 })
 
 promessaNumero.then((val) => {
+    if (val % 2 == 0) {
+        console.log("Il numero è pari")
+    } else {console.log("Il numero è dispari")}
     return val;
 }).then((val) => {
+    if (val % 2 == 0) {
+        console.log("Il numero è pari")
+    } else {console.log("Il numero è dispari")}
     return val*2;
 }).then ((val) => {
+    if (val % 2 == 0) {
+        console.log("Il numero è pari")
+    } else {console.log("Il numero è dispari")}
     return val + 3;
 }).then((val) => {
     console.log(val)
