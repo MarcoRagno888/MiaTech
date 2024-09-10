@@ -732,7 +732,7 @@ ritarda(false).then((mex) => {
     console.log(mex);
 }).catch((errore) => {
     console.error(errore)
-});*/
+});
 
 let promessa = new Promise ((resolve, reject) => {
     let ok = false;
@@ -748,4 +748,20 @@ promessa.then ((risultato) => {
     console.log(risultato)
 }).catch((err) => {
     console.error(err)
-}).finally (console.log("Operazione conclusa"));
+}).finally (console.log("Operazione conclusa"));*/
+
+let promessaNumero = new Promise ((resolve) => {
+    setTimeout(() => {
+        resolve(1);
+    }, 1000);
+})
+
+promessaNumero.then((val) => {
+    return val;
+}).then((val) => {
+    return val*2;
+}).then ((val) => {
+    return val + 3;
+}).then((val) => {
+    console.log(val)
+})
