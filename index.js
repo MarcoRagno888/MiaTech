@@ -687,34 +687,37 @@ eseguiOperazione(5, 3, () => {
 
 //-----------------------------
 
-function eseguiOperazione(a, b, callback) {
+function CB (a, b, callback) {
     let risultato = a + b;
+
     callback(risultato);
 }
 
-eseguiOperazione(5, 3, (risultato) => {
-    console.log("Risultato della somma:", risultato);
-});
+CB (1, 1, (risultato) => {
+    console.log(risultato)
+})
 
 //-------------------------------
 
-function primaOperazione(a, b, callback) {
-    let risultato = a + b;
-    console.log("Risultato della prima operazione:", risultato);
-    callback(risultato);
+function CB1 (a, b, callback) {
+    let ris = a + b;
+    console.log(ris);
+
+    callback(ris);
 }
 
-function secondaOperazione(risultato, callback) {
-    let nuovoRisultato = risultato * 2;
-    console.log("Risultato della seconda operazione:", nuovoRisultato);
+function CB2 (ris, callback) {
+    let newRis = ris * 2;
+    console.log(newRis);
+
     callback();
 }
 
-primaOperazione(5, 3, (risultato) => {
-    secondaOperazione(risultato, () => {
-        console.log("Callback finale eseguito");
-    });
-});
+CB1(1, 1, (ris) => {
+    CB2 (ris, () => {
+        console.log("Callback Eseguita")
+    })
+})
 
 function ritarda(condizione) {
     return new Promise((risolvi, rifiuta) => {
@@ -833,7 +836,7 @@ Promise.all([prima(), seconda()]).then((val) => {
 
 Promise.race([prima(), seconda()]).then((val) => {
     console.log(val);
-})*/
+})
 
 function promiseAllSettled1 () {
     return new Promise ((resolve, reject) => {
@@ -877,4 +880,44 @@ Promise.allSettled(promises).then((risultato) => {
     risultato.forEach((risultato) => {
         console.log(risultato)
     })
-})
+})*/
+
+/**
+ * Creare una funzione che restituisca una promessa che può risolversi o essere 
+ * rifiutata in base a un valore casuale. Utilizzare then per creare una catena di promesse 
+ * e catch per gestire eventuali errori in qualsiasi punto della catena.
+ */
+
+function prom() {
+    return new Promise((resolve, reject) => {
+        let val = Math.random();
+
+        setTimeout(() => {
+            if (val > 1) {
+                resolve("Fatto")
+            } else {
+                reject(new Error("Errore"))
+            }
+        }, 1000)
+    })
+}
+
+prom()
+    .then((result) => {
+        console.log(result)
+        return new Promise((resolve, reject) => {
+            let val = Math.random();
+
+            if (val > 1.5) {
+                resolve("Fatto")
+            } else {
+                reject(new Error("Errore"))
+            }
+        })
+    })
+    .then((secondoRisultato) => {
+        console.log(secondoRisultato);
+    })
+    .catch((err) => {
+        console.error(err.message)
+    })
