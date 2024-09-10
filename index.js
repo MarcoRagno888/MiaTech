@@ -748,7 +748,7 @@ promessa.then ((risultato) => {
     console.log(risultato)
 }).catch((err) => {
     console.error(err)
-}).finally (console.log("Operazione conclusa"));*/
+}).finally (console.log("Operazione conclusa"));
 
 let promessaNumero = new Promise ((resolve) => {
     setTimeout(() => {
@@ -773,4 +773,22 @@ promessaNumero.then((val) => {
     return val + 3;
 }).then((val) => {
     console.log(val)
+})*/
+
+function promiseNumeroCasuale () {
+    return new Promise ((resolve, reject) => {
+        let num = Math.random() * 100;
+
+        if (num > 50) {
+            resolve(num);
+        } else if (num < 50) {
+            reject("Errore");
+        }
+    }
+)}
+
+promiseNumeroCasuale().then((val) => {
+    console.log(val)
+}).catch((err) => {
+    console.error("Errore")
 })
