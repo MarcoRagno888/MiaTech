@@ -929,7 +929,7 @@ async function mostraMessaggio(){
     console.log(mex);
 }
 
-mostraMessaggio();*/
+mostraMessaggio();
 
 function promiseBool (condizione) {
     return new Promise ((resolve, reject) => {
@@ -950,4 +950,29 @@ async function mostraEsito(){
     }
 }
 
-mostraEsito();
+mostraEsito();*/
+
+async function promiseMessaggio1() {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve("Messaggio1")
+        }, 4000)
+    })
+}
+
+async function promiseMessaggio2() {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve("Messaggio2")
+        }, 2000)
+    })
+}
+
+async function mostraEsiti() {
+    let mex = Promise.all([promiseMessaggio1(), promiseMessaggio2()]).then((val) => {
+        console.log(val);
+    })
+    console.log(mex);
+}
+
+mostraEsiti();
