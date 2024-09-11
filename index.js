@@ -950,7 +950,7 @@ async function mostraEsito(){
     }
 }
 
-mostraEsito();*/
+mostraEsito();
 
 async function promiseMessaggio1() {
     return new Promise((resolve) => {
@@ -975,4 +975,12 @@ async function mostraEsiti() {
     console.log(mex);
 }
 
-mostraEsiti();
+mostraEsiti();*/
+
+function dati() {
+    fetch("https://raw.githubusercontent.com/francescobianco/javascript-test/main/devtools/api/pizze.json")
+    .then(response => response.json())
+    .then(json => console.log(json))
+}
+
+dati();
