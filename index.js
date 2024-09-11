@@ -880,13 +880,7 @@ Promise.allSettled(promises).then((risultato) => {
     risultato.forEach((risultato) => {
         console.log(risultato)
     })
-})*/
-
-/**
- * Creare una funzione che restituisca una promessa che può risolversi o essere 
- * rifiutata in base a un valore casuale. Utilizzare then per creare una catena di promesse 
- * e catch per gestire eventuali errori in qualsiasi punto della catena.
- */
+})
 
 function prom() {
     return new Promise((resolve, reject) => {
@@ -920,4 +914,19 @@ prom()
     })
     .catch((err) => {
         console.error(err.message)
+    })*/
+
+function promiseMessaggio (){
+    return new Promise ((resolve) => {
+        setTimeout(() => {
+            resolve("Messaggio")
+        }, 2000)
     })
+}
+
+async function mostraMessaggio(){
+    let mex = await promiseMessaggio();
+    console.log(mex);
+}
+
+mostraMessaggio();
