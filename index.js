@@ -914,7 +914,7 @@ prom()
     })
     .catch((err) => {
         console.error(err.message)
-    })*/
+    })
 
 function promiseMessaggio (){
     return new Promise ((resolve) => {
@@ -929,4 +929,25 @@ async function mostraMessaggio(){
     console.log(mex);
 }
 
-mostraMessaggio();
+mostraMessaggio();*/
+
+function promiseBool (condizione) {
+    return new Promise ((resolve, reject) => {
+        if (condizione) {
+            resolve("Operazione riuscita")
+        } else {
+            reject(new Error("Errore"))
+        }
+    })
+}
+
+async function mostraEsito(){
+    try {
+        let mex = await promiseBool(false);
+        console.log(mex);
+    } catch (e) {
+        console.error(e.message)
+    }
+}
+
+mostraEsito();
