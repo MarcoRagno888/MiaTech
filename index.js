@@ -975,7 +975,7 @@ async function mostraEsiti() {
     console.log(mex);
 }
 
-mostraEsiti();*/
+mostraEsiti();
 
 function dati() {
     fetch("https://raw.githubusercontent.com/francescobianco/javascript-test/main/devtools/api/pizze.json")
@@ -983,4 +983,27 @@ function dati() {
     .then(json => console.log(json))
 }
 
-dati();
+dati();*/
+
+async function inviaDati(){
+    let dati = {
+        userID : 1,
+        title : "Titolo",
+        body : "Body del post",
+        id : 1
+    }
+
+    let response = await fetch("https://jsonplaceholder.typicode.com/posts", {
+        method : "POST",
+        headers : {
+            "Content-Type" : "application/json"
+        },
+        body : JSON.stringify(dati)
+    })
+
+    dati = await response.json();
+    console.log(dati);
+
+}
+
+inviaDati();
