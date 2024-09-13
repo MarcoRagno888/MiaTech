@@ -983,7 +983,7 @@ function dati() {
     .then(json => console.log(json))
 }
 
-dati();*/
+dati();
 
 async function inviaDati(){
     let dati = {
@@ -1006,4 +1006,23 @@ async function inviaDati(){
 
 }
 
-inviaDati();
+inviaDati();*/
+
+async function get() {
+    try {
+        let response = await fetch ("https://raw.githubusercontent.com/francescobianco/javascript-test/main/devtools/api/pizze.json")
+        /*.then(Response => Response.json())
+        .then(json => console.log(json))*/
+
+        let dati = await response.json();
+        console.log(dati);
+
+        if (!(response.ok)) {
+            throw new Error("Chiamata non riuscita")
+        }
+    } catch (e) {
+        console.error(e.message)
+    }
+}
+
+get();
