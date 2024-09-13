@@ -1025,12 +1025,12 @@ async function get() {
     }
 }
 
-get();*/
+get();
 
 async function getCors() {
     let proxy = "https://api.allorigins.win/get?url=";
     let url = "https://www.google.com/robots.txt";
-    
+
     try {
         let response = await fetch(proxy + encodeURIComponent(url));
 
@@ -1045,4 +1045,13 @@ async function getCors() {
     }
 }
 
-getCors();
+getCors();*/
+
+async function chiamata () {
+    let response = await fetch ("https://raw.githubusercontent.com/francescobianco/javascript-test/main/devtools/api/pizze.json")
+
+    let dati = await response.json();
+    console.log(dati);
+}
+
+chiamata();
