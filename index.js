@@ -1028,8 +1028,11 @@ async function get() {
 get();*/
 
 async function getCors() {
+    let proxy = "https://api.allorigins.win/get?url=";
+    let url = "https://www.google.com/robots.txt";
+    
     try {
-        let response = await fetch("https://www.google.com/robots.txt://api.github.com/users/octocat");
+        let response = await fetch(proxy + encodeURIComponent(url));
 
         let dati = await response.json();
         console.log(dati);
