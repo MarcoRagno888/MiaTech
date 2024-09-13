@@ -1006,13 +1006,13 @@ async function inviaDati(){
 
 }
 
-inviaDati();*/
+inviaDati();
 
 async function get() {
     try {
         let response = await fetch ("https://raw.githubusercontent.com/francescobianco/javascript-test/main/devtools/api/pizze.json")
-        /*.then(Response => Response.json())
-        .then(json => console.log(json))*/
+        .then(Response => Response.json())
+        .then(json => console.log(json))
 
         let dati = await response.json();
         console.log(dati);
@@ -1025,4 +1025,21 @@ async function get() {
     }
 }
 
-get();
+get();*/
+
+async function getCors() {
+    try {
+        let response = await fetch("https://www.google.com/robots.txt://api.github.com/users/octocat");
+
+        let dati = await response.json();
+        console.log(dati);
+
+        if (!response.ok) {
+            throw new Error("CORS Error")
+        }
+    } catch (e) {
+        console.error(e.message)
+    }
+}
+
+getCors();
