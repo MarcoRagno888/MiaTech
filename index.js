@@ -1097,3 +1097,6 @@ console.log(getCookie("User"));*/
 console.log(document);
 const $paragraph = document.getElementById("paragraph");
 const $paragraph1 = document.querySelector("p");
+const $paragraph2 = document.getElementById("innerT");
+
+$paragraph2.innerText = "Testo aggiunto con Javascript";
