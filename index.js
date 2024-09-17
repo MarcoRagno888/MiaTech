@@ -1054,7 +1054,7 @@ async function chiamata () {
     console.log(dati);
 }
 
-chiamata();*/
+chiamata();
 
 function setCookie(name, value) {
     const d = new Date();
@@ -1092,4 +1092,6 @@ function deleteCookie(name) {
   }
 
 deleteCookie("User");
-console.log(getCookie("User"));
+console.log(getCookie("User"));*/
+
+console.log(document);
