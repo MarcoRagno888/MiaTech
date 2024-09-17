@@ -1106,3 +1106,9 @@ $paragraph2.innerHTML += "<br><button type='button'>Clicca qui</button>";
 
 let ul = document.createElement("ul");
 document.body.append(ul);
+
+for (let i = 0; i<5; i++) {
+    let li = document.createElement("li");
+    li.innerText = "Menu " + [(i + 1)];
+    ul.append(li);
+}
