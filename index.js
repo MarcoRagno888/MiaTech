@@ -1095,3 +1095,4 @@ deleteCookie("User");
 console.log(getCookie("User"));*/
 
 console.log(document);
+const $paragraph = document.getElementById("paragraph");
