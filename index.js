@@ -1103,3 +1103,6 @@ $paragraph2.innerText = "Testo aggiunto con Javascript";
 $paragraph2.style.backgroundColor = "red";
 $paragraph2.style.fontSize = "20px";
 $paragraph2.innerHTML += "<br><button type='button'>Clicca qui</button>";
+
+let ul = document.createElement("ul");
+document.body.append(ul);
