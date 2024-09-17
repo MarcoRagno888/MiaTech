@@ -1096,3 +1096,4 @@ console.log(getCookie("User"));*/
 
 console.log(document);
 const $paragraph = document.getElementById("paragraph");
+const $paragraph1 = document.querySelector("p");
