@@ -33,13 +33,28 @@ for (let i = 0; i<5; i++) {
 //------------------------------------
 
 $form.addEventListener("submit", (event) => {
+    event.preventDefault();
     const entries = new FormData(event.target);
     const values = Object.fromEntries(entries);
-    nomeUtente = values.nome;
-    cognomeUtente = values.cognome;
 
-    if (nomeUtente== "" || cognomeUtente == "") {
-        event.preventDefault();
+    if (values.nome == "" || values.cognome == "") {
         alert("Compila tutti i campi prima di inviare");
+    } else {
+        utilities.save("Nome Utente", values.nome)
+        utilities.save("Cognome Utente", values.cognome)
     }
 })
+
+//------------------------------------------
+
+const utilities = {
+    save: (key, value) => {
+        localStorage.setItem(key, JSON.stringify(value));
+    },
+    get: (key) => {
+        return JSON.parse(localStorage.getItem(key))
+    }, 
+    remove: (key) => {
+        localStorage.removeItem(key)
+    }
+}
