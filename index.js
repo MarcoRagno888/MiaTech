@@ -58,3 +58,17 @@ const utilities = {
         localStorage.removeItem(key)
     }
 }
+
+const utilitiesSession = {
+    save: (key, value) => {
+        sessionStorage.setItem(key, JSON.stringify(value));
+        console.log(sessionStorage);
+    },
+    get: (key) => {
+        return JSON.parse(sessionStorage.getItem(key));
+    }, 
+    remove: (key) => {
+        sessionStorage.removeItem(key);
+        console.log(sessionStorage);
+    }
+}
