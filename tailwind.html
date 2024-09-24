@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,11 +12,25 @@
             }
         }
     </style>
+    <script>
+        module.exports = {
+            theme: {
+                container: {
+                    center: true,
+                    margin: '2px',
+                    padding: '2rem',
+                },
+            },
+        };
+    </script>
     <title>Document</title>
 </head>
+
 <body>
     <div class="p-4">
-        <h1 class="bg-gradient-to-r from-blue-500 via-green-500 to-red-500 inline-block text-transparent bg-clip-text p-4 text-xl">HELLO WORLD!</h1>
+        <h1
+            class="bg-gradient-to-r from-blue-500 via-green-500 to-red-500 inline-block text-transparent bg-clip-text p-4 text-xl">
+            HELLO WORLD!</h1>
         <br>
         <p class="bg-blue-300 text-black font-bold inline-block">Testo di prova delle classi</p>
     </div>
@@ -27,5 +42,10 @@
             <li><a href="#" class="text-blue-300">Menu 3</a></li>
         </ul>
     </div>
+    <div class="divider"></div>
+    <div class="container">
+        <p class="text-center">Contenuto container</p>
+    </div>
 </body>
+
 </html>
