@@ -62,13 +62,27 @@ const utilities = {
 const utilitiesSession = {
     save: (key, value) => {
         sessionStorage.setItem(key, JSON.stringify(value));
-        console.log(sessionStorage);
     },
     get: (key) => {
-        return JSON.parse(sessionStorage.getItem(key));
+        return JSON.parse(sessionStorage.getItem(key))
     }, 
     remove: (key) => {
-        sessionStorage.removeItem(key);
-        console.log(sessionStorage);
+        sessionStorage.removeItem(key)
+        console.log(sessionStorage)
+    }
+}
+
+const utilitiesSessionLocal = {
+    save: (key, value) => {
+        sessionStorage.setItem(key, JSON.stringify(value));
+        localStorage.setItem(key, JSON.stringify(value));
+    },
+    get: (key) => {
+        return JSON.parse(sessionStorage.getItem(key)) && JSON.parse(localStorage.getItem(key));
+    }, 
+    remove: (key) => {
+        sessionStorage.removeItem(key)
+        localStorage.removeItem(key)
+        console.log(sessionStorage)
     }
 }
