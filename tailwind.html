@@ -11,7 +11,7 @@
                 @apply w-full my-6 h-[1px] bg-gray-500
             }
             .btn {
-                @apply border bg-gray-200 m-2 active:border-gray-500 rounded text-xl p-3 hover:bg-gray-300
+                @apply border bg-gray-200 m-2 active:border-gray-500 rounded text-xl p-3
         } 
         }
     </style>
@@ -120,6 +120,15 @@
 
     <div class="p-4 dark:bg-gray-800 dark:text-white">
         <button id="toggleDarkMode" class="btn dark:bg-gray-600 text-white">Dark Mode: <span id="darkModeStatus">Inactive</span></button>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="p-4 dark:bg-gray-800 dark:text-gray-400">
+        <p class="text-primary dark:text-white">Bottoni con stili differenti all'hover</p>
+        <button class="btn hover:bg-dark hover:text-white">1</button>
+        <button class="btn hover:bg-accent hover:text-highlight">2</button>
+        <button class="btn hover:bg-highlight hover:text-accent">3</button>
     </div>
 
 
