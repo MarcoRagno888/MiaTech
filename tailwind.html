@@ -11,7 +11,7 @@
                 @apply w-full my-6 h-[1px] bg-gray-500
             }
             .btn {
-            @apply border bg-gray-200 m-2 active:border-gray-500 rounded text-xl p-3 hover:bg-gray-300
+                @apply border bg-gray-200 m-2 active:border-gray-500 rounded text-xl p-3 hover:bg-gray-300
         } 
         }
     </style>
@@ -67,7 +67,7 @@
         </ul>
     </div>
     <div class="divider"></div>
-    <div class="container">
+    <div class="container bg-highlight">
         <p class="text-center">Contenuto container</p>
     </div>
 
@@ -87,11 +87,25 @@
     <div class="divider"></div>
 
     <div class="p-4">
-        <p class="">Bottoni con colori personalizzati</p>
+        <p class="text-primary">Bottoni con colori personalizzati</p>
         <button class="btn bg-accent">1</button>
         <button class="btn bg-highlight">2</button>
         <button class="btn bg-dark text-white">3</button>
         <button class="btn bg-light text-dark">4</button>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="flex justify-center align-center container" style="width: 300px;">
+        <div class="flex flex-col justify-center align-center bg-secondary border border-double border-dark">
+            <div class="flex flex-col justify-center align-center">
+                <h1 class="text-center">Titolo</h1>
+                <img src="https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?ixid=M3w0NjA3MXwwfDF8c2VhcmNofDJ8fGZvcmVzdHxlbnwwfHx8fDE2OTU4NDg1NTN8&ixlib=rb-4.0.3&w=600&q=80" alt="Immagine della foresta da Unsplash">
+            </div>
+            <div class="">
+                <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, deserunt!</p>
+            </div>
+        </div>
     </div>
 
 </body>
