@@ -10,6 +10,9 @@
             .divider {
                 @apply w-full my-6 h-[1px] bg-gray-500
             }
+            .btn {
+            @apply border bg-gray-200 m-2 active:border-gray-500 rounded text-xl p-3 hover:bg-gray-300
+        } 
         }
     </style>
     <script>
@@ -20,6 +23,10 @@
                     colors: {
                         primary: '#41463D',
                         secondary: '#f97316',
+                        accent: '#34d399', // Verde chiaro
+                        highlight: '#fbbf24', // Giallo vivace
+                        dark: '#111827', // Grigio scuro
+                        light: '#f3f4f6', // Grigio chiaro
                     },
                     spacing: {
                         '13': '3.25rem',
@@ -75,6 +82,16 @@
 
     <div class="p-4">
         <p class="text-xxl text-secondary">Utilizzo del tema personalizzato</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="p-4">
+        <p class="">Bottoni con colori personalizzati</p>
+        <button class="btn bg-accent">1</button>
+        <button class="btn bg-highlight">2</button>
+        <button class="btn bg-dark text-white">3</button>
+        <button class="btn bg-light text-dark">4</button>
     </div>
 
 </body>
