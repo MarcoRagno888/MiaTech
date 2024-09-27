@@ -18,7 +18,7 @@
     <script>
 
         tailwind.config = {
-            darkMode: 'media',
+            darkMode: 'class',
             theme: {
                 extend: {
                     colors: {
@@ -52,44 +52,49 @@
     <title>Document</title>
 </head>
 
-<body class="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-100">
-    <div class="p-4">
+<body class="dark dark:bg-gray-900 dark:text-gray-100">
+
+    <div class="p-4 dark:bg-gray-800 dark:text-white">
         <h1
             class="bg-gradient-to-r from-blue-500 via-green-500 to-red-500 inline-block text-transparent bg-clip-text p-4 text-xl">
             HELLO WORLD!</h1>
         <br>
         <p class="bg-blue-300 text-black font-bold inline-block">Testo di prova delle classi</p>
     </div>
+
     <div class="divider"></div>
-    <div class="p-4">
+
+    <div class="p-4 dark:bg-gray-800 dark:text-white">
         <ul class="bg-yellow-300 inline-block p-4">
             <li><a href="#" class="text-blue-800">Menu 1</a></li>
             <li><a href="#" class="text-blue-500">Menu 2</a></li>
             <li><a href="#" class="text-blue-300">Menu 3</a></li>
         </ul>
     </div>
+
     <div class="divider"></div>
-    <div class="container bg-highlight">
+
+    <div class="container bg-highlight dark:bg-gray-800 dark:text-white">
         <p class="text-center">Contenuto container</p>
     </div>
 
     <div class="divider"></div>
 
-    <div>
+    <div class="dark:bg-gray-800 dark:text-white">
         <p class="p-13">Il padding di questo di questo paragrafo è stato impostato usando uno spacing modificato nella
             configurazione di tailwind</p>
     </div>
 
     <div class="divider"></div>
 
-    <div class="p-4">
+    <div class="p-4 dark:bg-gray-800 dark:text-white">
         <p class="text-xxl text-secondary">Utilizzo del tema personalizzato</p>
     </div>
 
     <div class="divider"></div>
 
-    <div class="p-4">
-        <p class="text-primary">Bottoni con colori personalizzati</p>
+    <div class="p-4 dark:bg-gray-800 dark:text-white">
+        <p class="text-primary dark:text-white">Bottoni con colori personalizzati</p>
         <button class="btn bg-accent">1</button>
         <button class="btn bg-highlight">2</button>
         <button class="btn bg-dark text-white">3</button>
@@ -98,7 +103,7 @@
 
     <div class="divider"></div>
 
-    <div class="flex justify-center align-center container p-4" style="width: 300px;">
+    <div class="flex justify-center align-center container p-4 dark:bg-gray-800 dark:text-white" style="width: 300px;">
         <div class="flex flex-col justify-center align-center bg-secondary border border-double border-dark">
             <div class="flex flex-col justify-center align-center">
                 <h1 class="text-center text-highlight">Titolo</h1>
