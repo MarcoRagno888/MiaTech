@@ -13,23 +13,26 @@
         }
     </style>
     <script>
-        module.exports = {
-            theme: {
-                container: {
-                    center: true,
-                    margin: '2px',
-                    padding: '2rem',
-                },
-            },
-        };
+
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
                         primary: '#41463D',
                     },
+                    spacing: {
+                        '13': '3.25rem',
+                        '15': '3.75rem',
+                        '128': '32rem',
+                        '144': '36rem',
+                    }
                 },
-            },
+                container: {
+                    center: true,
+                    margin: '2px',
+                    padding: '2rem',
+                },
+            }
         }
 
     </script>
@@ -56,6 +59,14 @@
     <div class="container">
         <p class="text-center">Contenuto container</p>
     </div>
+
+    <div class="divider"></div>
+
+    <div>
+        <p class="p-13">Il padding di questo di questo paragrafo è stato impostato usando uno spacing modificato nella
+            configurazione di tailwind</p>
+    </div>
+
 </body>
 
 </html>
