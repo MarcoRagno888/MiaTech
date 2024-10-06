@@ -4,9 +4,12 @@ const App = () => {
 
   return (
     <>
-      <div>
+      <div class="p-4">
         <HelloWorld />
       </div>
+
+      <div className="divider"></div>
+      
     </>
   )
 }

@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .btn {
+        @apply border bg-gray-200 m-2 active:border-gray-500 rounded text-xl p-3
+    }
+    .divider { 
+        @apply w-full my-6 h-[1px] bg-gray-500 
+    }
+}
