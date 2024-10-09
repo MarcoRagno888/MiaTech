@@ -1,5 +1,11 @@
 import HelloWorld from './HelloWorld';
 
+const Counter = () => {
+  return (
+    <div className='p-4'>Counter: 0</div>
+  )
+}
+
 const App = () => {
 
   return (
@@ -9,6 +15,8 @@ const App = () => {
       </div>
 
       <div className="divider"></div>
+
+      <Counter />
       
     </>
   )
