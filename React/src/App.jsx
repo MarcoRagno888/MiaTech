@@ -1,8 +1,11 @@
+import { useState } from 'react';
 import HelloWorld from './HelloWorld';
 
 const Counter = () => {
+  const [counter, setCounter] = useState(0);
+  
   return (
-    <div className='p-4'>Counter: 0</div>
+    <div className='p-4'>Counter: {counter}</div>
   )
 }
 
