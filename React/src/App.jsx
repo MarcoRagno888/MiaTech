@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import HelloWorld from './HelloWorld';
 
 const Counter = () => {
@@ -21,6 +21,10 @@ const Counter = () => {
       return _counter = 0;
     })
   }
+
+  useEffect(() => {
+    document.title = `Count: ${counter}`;
+  }, [counter])
   
    
   return (
