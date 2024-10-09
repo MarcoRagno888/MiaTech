@@ -3,9 +3,20 @@ import HelloWorld from './HelloWorld';
 
 const Counter = () => {
   const [counter, setCounter] = useState(0);
-  
+
+  const handleAddClick = () => {
+    setCounter((_counter) => {
+      return _counter + 1;
+    })
+  }
+   
   return (
-    <div className='p-4'>Counter: {counter}</div>
+    <>
+      <div className='p-4'>
+        <div>Counter: {counter}</div>
+        <button className='btn' onClick={handleAddClick}>Add</button>
+      </div>
+    </>
   )
 }
 
