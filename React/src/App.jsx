@@ -9,12 +9,20 @@ const Counter = () => {
       return _counter + 1;
     })
   }
+
+  const handleRemoveClick = () => {
+    setCounter((_counter) => {
+      return _counter - 1;
+    })
+  }
+  
    
   return (
     <>
       <div className='p-4'>
         <div>Counter: {counter}</div>
         <button className='btn' onClick={handleAddClick}>Add</button>
+        <button className='btn' onClick={handleRemoveClick}>Remove</button>
       </div>
     </>
   )
