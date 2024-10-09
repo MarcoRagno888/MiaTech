@@ -15,6 +15,12 @@ const Counter = () => {
       return _counter - 1;
     })
   }
+
+  const handleResetClick = () => {
+    setCounter((_counter) => {
+      return _counter = 0;
+    })
+  }
   
    
   return (
@@ -23,6 +29,7 @@ const Counter = () => {
         <div>Counter: {counter}</div>
         <button className='btn' onClick={handleAddClick}>Add</button>
         <button className='btn' onClick={handleRemoveClick}>Remove</button>
+        <button className='btn' onClick={handleResetClick}>Reset</button>
       </div>
     </>
   )
