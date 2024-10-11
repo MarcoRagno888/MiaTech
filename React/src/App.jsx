@@ -1,6 +1,23 @@
 import { useEffect, useRef, useState } from 'react';
 import HelloWorld from './HelloWorld';
 
+const ItemList = ({ list }) => {
+
+  return (
+    <>
+      <div className="p-4">
+        <ul>
+          {
+            list.map((item, index) => (
+              <li key={index}>{item}</li>
+            ))
+          }
+        </ul>
+      </div>
+    </>
+  )
+}
+
 const UncontrolledInput = () => {
   const inputRef = useRef(null);
 
@@ -134,6 +151,8 @@ const App = () => {
       <div className="divider"></div>
 
       <UncontrolledInput />
+
+      <div className="divider"></div>
 
     </>
   )
