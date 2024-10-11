@@ -6,7 +6,7 @@ const LoginForm = () => {
     userName: "",
     password: ""
   })
-  
+
   const handleInput = (event) => {
     const { name, value } = event.target;
     
@@ -19,7 +19,7 @@ const LoginForm = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    console.log(form);
+    alert(`User Name: ${form.userName} Password: ${form.password}`)
     }
 
   return (
