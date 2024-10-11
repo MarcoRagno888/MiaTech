@@ -168,15 +168,13 @@ const App = () => {
 
       <div className="divider"></div>
 
-    </>
-  )
-}
-
-/**
- * <Card>
+      <Card>
         <h1>Titolo</h1>
         <p>Lorem ipsum dolor sit amet.</p>
       </Card>
- */
+
+    </>
+  )
+}
 
 export default App;
