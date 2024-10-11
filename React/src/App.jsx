@@ -154,6 +154,8 @@ const App = () => {
 
       <div className="divider"></div>
 
+      <ItemList list={["Link 1", "Link 2", "Link 3"]} />
+
     </>
   )
 }
