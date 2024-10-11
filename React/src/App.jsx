@@ -1,6 +1,21 @@
 import { useEffect, useState } from 'react';
 import HelloWorld from './HelloWorld';
 
+const TextInput = () => {
+  const [inputValue, setInputValue] = useState("");
+
+  const handleInput = (event) => {
+      const newValue = event.target.value;
+      setInputValue(newValue);
+  }
+
+  return (
+    <div className="p-4">
+      <input type="text" className="border border-black" name="inputValue" value={inputValue} onInput={handleInput} />
+    </div>
+  )
+}
+
 const Counter = () => {
   const [counter, setCounter] = useState(0);
 
@@ -25,8 +40,8 @@ const Counter = () => {
   useEffect(() => {
     document.title = `Count: ${counter}`;
   }, [counter])
-  
-   
+
+
   return (
     <>
       <div className='p-4'>
@@ -43,14 +58,18 @@ const App = () => {
 
   return (
     <>
-      <div class="p-4">
+      <div className="p-4">
         <HelloWorld />
       </div>
 
       <div className="divider"></div>
 
       <Counter />
-      
+
+      <div className="divider"></div>
+
+      <TextInput />
+
     </>
   )
 }
