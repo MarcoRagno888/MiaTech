@@ -1,6 +1,44 @@
 import { useEffect, useState } from 'react';
 import HelloWorld from './HelloWorld';
 
+const LoginForm = () => {
+  const [form, setForm] = useState({
+    userName: "",
+    password: ""
+  })
+  
+  const handleInput = (event) => {
+    const { name, value } = event.target;
+    
+    setForm((_form) => ({
+      ..._form,
+      [name] : value
+    }))
+  }
+  
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    console.log(form);
+    }
+
+  return (
+    <>
+      <div className="p-4">
+        <form onSubmit={handleSubmit}>
+
+          <label htmlFor="userName">User: </label>
+          <input type="text" name="userName" value={form.userName} onInput={handleInput} className="border border black" />
+
+          <label htmlFor="password">Password: </label>
+          <input type="password" name="password" value={form.password} onInput={handleInput} className="border border black" />
+          <button className="btn" type="submit">Submit</button>
+        </form>
+      </div>
+    </>
+  )
+}
+
 const TextInput = () => {
   const [inputValue, setInputValue] = useState("");
 
@@ -69,6 +107,10 @@ const App = () => {
       <div className="divider"></div>
 
       <TextInput />
+
+      <div className="divider"></div>
+
+      <LoginForm />
 
     </>
   )
