@@ -1,6 +1,17 @@
 import { useEffect, useState } from 'react';
 import HelloWorld from './HelloWorld';
 
+const UncontrolledInput = () => {
+  return (
+    <>
+      <div className="p-4">
+        <label htmlFor="input">Input Ref: </label>
+        <input type="text" name="input" className="border border black" />
+      </div>
+    </>
+  )
+}
+
 const LoginForm = () => {
   const [form, setForm] = useState({
     userName: "",
@@ -111,6 +122,10 @@ const App = () => {
       <div className="divider"></div>
 
       <LoginForm />
+
+      <div className="divider"></div>
+
+      <UncontrolledInput />
 
     </>
   )
