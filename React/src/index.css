@@ -9,4 +9,16 @@
     .divider { 
         @apply w-full my-6 h-[1px] bg-gray-500 
     }
+    .card {
+        border: 1px solid black;
+        border-radius: 5%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: auto;
+        max-width: 400px; 
+        margin: 0 auto; 
+        padding: 16px;
+    }
 }

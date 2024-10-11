@@ -1,6 +1,16 @@
 import { useEffect, useRef, useState } from 'react';
 import HelloWorld from './HelloWorld';
 
+const Card = ({ children }) => {
+  return (
+    <>
+      <div className="card">
+        {children}
+      </div>
+    </>
+  )
+}
+
 const ItemList = ({ list }) => {
 
   return (
@@ -156,8 +166,17 @@ const App = () => {
 
       <ItemList list={["Link 1", "Link 2", "Link 3"]} />
 
+      <div className="divider"></div>
+
     </>
   )
 }
+
+/**
+ * <Card>
+        <h1>Titolo</h1>
+        <p>Lorem ipsum dolor sit amet.</p>
+      </Card>
+ */
 
 export default App;
