@@ -1,12 +1,14 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import HelloWorld from './HelloWorld';
 
 const UncontrolledInput = () => {
+  const inputRef = useRef(null);
+  
   return (
     <>
       <div className="p-4">
         <label htmlFor="input">Input Ref: </label>
-        <input type="text" name="input" className="border border black" />
+        <input type="text" ref={inputRef} name="input" className="border border black" />
       </div>
     </>
   )
