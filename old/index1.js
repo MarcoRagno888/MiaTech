@@ -719,7 +719,7 @@ CB1(1, 1, (ris) => {
     })
 })
 
-function ritarda(condizione) {
+function ritarda(condizione) { //promise corretto
     return new Promise((risolvi, rifiuta) => {
         setTimeout(() => {
             if (condizione) {
