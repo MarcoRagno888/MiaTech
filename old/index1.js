@@ -628,7 +628,7 @@ let int = setInterval(() => console.log("Messaggio"), 1000);
 
 setTimeout(() => {clearInterval(int)}, 5000);
 
-function dividi (a,b) {
+function dividi (a,b) { //try & catch
     try {
         if (b === 0) {
             throw new Error("Il divisore è uguale a zero");
