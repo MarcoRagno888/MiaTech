@@ -1086,13 +1086,12 @@ function getCookie(cname) {
 console.log(getCookie("User"));
 
 function deleteCookie(name) {
-    setCookie(name, "", {
-      'max-age': -1
-    })
+    setCookie(name, "", -1);
   }
 
 deleteCookie("User");
-console.log(getCookie("User"));*/
+console.log(getCookie("User"));
+*/
 
 console.log(document);
 const $paragraph = document.getElementById("paragraph");
