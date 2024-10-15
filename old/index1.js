@@ -969,10 +969,11 @@ async function promiseMessaggio2() {
 }
 
 async function mostraEsiti() {
-    let mex = Promise.all([promiseMessaggio1(), promiseMessaggio2()]).then((val) => {
-        console.log(val);
-    })
-    console.log(mex);
+    let mex1 = await promiseMessaggio1();
+    console.log(mex1);
+
+    let mex2 = await promiseMessaggio2();
+    console.log(mex2);
 }
 
 mostraEsiti();
