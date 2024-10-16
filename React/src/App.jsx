@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import HelloWorld from './HelloWorld';
+import TodoList from './Components/TodoList';
 
 const Card = ({ children }) => {
   return (
@@ -172,6 +173,10 @@ const App = () => {
         <h1>Titolo</h1>
         <p>Lorem ipsum dolor sit amet.</p>
       </Card>
+
+      <div className="divider"></div>
+
+      <TodoList />
 
     </>
   )
