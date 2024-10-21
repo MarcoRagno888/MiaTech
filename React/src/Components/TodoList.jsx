@@ -1,4 +1,4 @@
-import { useCallback, useState } from "react";
+import { useCallback, useMemo, useState } from "react";
 import { useFetch } from "../hooks/useFetch";
 import { useFilteredTodos } from "../hooks/useFilteredTodos";
 
@@ -8,7 +8,15 @@ const TodoList = () => {
     const { data, loading, error } = useFetch(API_URL);
 
     const [selector, setSelector] = useState("");
-    const filtered = useFilteredTodos(data, selector);
+
+    const filtered = useMemo(() => {
+        if (!data) return []; // Se i dati non sono ancora disponibili, ritorna un array vuoto
+
+        const selectorMin = selector.toLowerCase();
+        return data.filter(todo =>
+            todo.title && todo.title.toLowerCase().includes(selectorMin)
+        );
+    }, [data, selector]);
 
     const handleInputChange = useCallback((e) => {
             setSelector(e.target.value);
