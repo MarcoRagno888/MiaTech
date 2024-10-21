@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import { useFetch } from "../hooks/useFetch";
 import { useFilteredTodos } from "../hooks/useFilteredTodos";
 
@@ -9,6 +9,10 @@ const TodoList = () => {
 
     const [selector, setSelector] = useState("");
     const filtered = useFilteredTodos(data, selector);
+
+    const handleInputChange = useCallback((e) => {
+            setSelector(e.target.value);
+        }, []); 
 
     if (loading) return <p>Loading...</p>;
     if (error) return <p>Error: {error}</p>
@@ -23,7 +27,7 @@ const TodoList = () => {
                         className="border border-black"
                         placeholder="Cerca to do..."
                         value={selector}
-                        onChange={(e) => setSelector(e.target.value)}
+                        onChange={handleInputChange}
                     />
                 </div>
                 <div>
