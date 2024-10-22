@@ -1,4 +1,4 @@
-import { useCallback, useMemo, useState } from "react";
+import { useCallback, useMemo, useRef, useState } from "react";
 import { useFetch } from "../hooks/useFetch";
 import { useFilteredTodos } from "../hooks/useFilteredTodos";
 
@@ -8,6 +8,7 @@ const TodoList = () => {
     const { data, loading, error } = useFetch(API_URL);
 
     const [selector, setSelector] = useState("");
+    const inputRef = useRef(null);
 
     const filtered = useMemo(() => {
         if (!data) return []; // Se i dati non sono ancora disponibili, ritorna un array vuoto
@@ -21,6 +22,12 @@ const TodoList = () => {
     const handleInputChange = useCallback((e) => {
             setSelector(e.target.value);
         }, []); 
+
+    useEffect(() => {
+        if (inputRef.current) {
+            inputRef.current.focus();
+        }
+    }, []); 
 
     if (loading) return <p>Loading...</p>;
     if (error) return <p>Error: {error}</p>
