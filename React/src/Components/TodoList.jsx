@@ -1,13 +1,14 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { useTodos } from "../Components/Context/TodoContext"; // Importa il contesto
-import { Link } from "react-router-dom";  // Importa Link per la navigazione
+import { useTodos } from "../Components/Context/TodoContext";
+import { Link, useSearchParams } from "react-router-dom";  // Importa useSearchParams
 
 const TodoList = () => {
-    const { todos, setTodos } = useTodos();  // Usa il contesto
-    const [selector, setSelector] = useState("");
+    const { todos, setTodos } = useTodos();
+    const [searchParams, setSearchParams] = useSearchParams();  // Ottieni e imposta i parametri della query
+    const [selector, setSelector] = useState(searchParams.get("search") || "");  // Usa il termine di ricerca nei parametri della query
     const inputRef = useRef(null);
 
-    // Filtro i to-do in base alla ricerca
+    // Filtro i to-do in base al termine di ricerca
     const filtered = useMemo(() => {
         if (!todos) return [];
 
@@ -44,6 +45,15 @@ const TodoList = () => {
         }
     }, [todos.length, setTodos]);
 
+    // Sincronizza il termine di ricerca con i parametri della query
+    useEffect(() => {
+        if (selector) {
+            setSearchParams({ search: selector });  // Aggiungi il termine di ricerca nei parametri della query
+        } else {
+            setSearchParams({});  // Se il termine di ricerca è vuoto, rimuovi il parametro dalla query
+        }
+    }, [selector, setSearchParams]);
+
     return (
         <div className="p-2">
             <h1>To Do List</h1>
@@ -62,7 +72,7 @@ const TodoList = () => {
                     {filtered.length > 0 ? (
                         filtered.map(todo => (
                             <li key={todo.id}>
-                                <Link to={`/todos/${todo.id}`}>{todo.title}</Link>  {/* Aggiungi il link per i dettagli */}
+                                <Link to={`/todos/${todo.id}`}>{todo.title}</Link>  {/* Link ai dettagli */}
                             </li>
                         ))
                     ) : (
@@ -73,7 +83,7 @@ const TodoList = () => {
             <ul>
                 {todos && todos.map((todo) => (
                     <li key={todo.id}>
-                        <Link to={`/todos/${todo.id}`}>{todo.title}</Link>  {/* Aggiungi il link per i dettagli */}
+                        <Link to={`/todos/${todo.id}`}>{todo.title}</Link>  {/* Link ai dettagli */}
                     </li>
                 ))}
             </ul>
