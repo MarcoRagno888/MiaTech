@@ -2,6 +2,8 @@ import Home from './Components/Pages/Home';
 import About from './Components/Pages/About';
 import { Route, Routes } from "react-router-dom";
 import Layout from './layouts/Layout';
+import TodoDetails from './Components/TodoDetails';
+import TodoList from './Components/TodoList';
 
 const App = () => {
 
