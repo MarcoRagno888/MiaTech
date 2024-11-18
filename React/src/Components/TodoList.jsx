@@ -1,17 +1,15 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { useTodos } from "../context/TodoContext"; // Importa il contesto
-import { Link } from "react-router-dom";
-
-// Rimuovi la costante API_URL, dato che ora i dati vengono presi dal contesto.
+import { useTodos } from "../Components/Context/TodoContext";
+import { Link } from "react-router-dom";  // Importa Link per la navigazione
 
 const TodoList = () => {
-    const { todos, setTodos } = useTodos(); // Usa il contesto per ottenere e settare i to-do
+    const { todos, setTodos } = useTodos();  // Usa il contesto
     const [selector, setSelector] = useState("");
     const inputRef = useRef(null);
 
     // Filtro i to-do in base alla ricerca
     const filtered = useMemo(() => {
-        if (!todos) return [];  // Se i to-do non sono ancora disponibili, ritorna un array vuoto
+        if (!todos) return [];
 
         const selectorMin = selector.toLowerCase();
         return todos.filter(todo =>
@@ -35,7 +33,7 @@ const TodoList = () => {
             try {
                 const response = await fetch("https://jsonplaceholder.typicode.com/todos");
                 const data = await response.json();
-                setTodos(data); // Imposta i to-do nel contesto
+                setTodos(data);  // Imposta i to-do nel contesto
             } catch (error) {
                 console.error("Error fetching todos:", error);
             }
@@ -63,7 +61,9 @@ const TodoList = () => {
                 <ul>
                     {filtered.length > 0 ? (
                         filtered.map(todo => (
-                            <li key={todo.id}>{todo.title}</li>
+                            <li key={todo.id}>
+                                <Link to={`/todos/${todo.id}`}>{todo.title}</Link> {/* Link ai dettagli */}
+                            </li>
                         ))
                     ) : (
                         <li>Nessun to-do trovato</li>
@@ -73,14 +73,7 @@ const TodoList = () => {
             <ul>
                 {todos && todos.map((todo) => (
                     <li key={todo.id}>
-                        {todo.title} {todo.completed ? "✅" : "❌"}
-                    </li>
-                ))}
-            </ul>
-            <ul>
-                {todos.map((todo) => (
-                    <li key={todo.id}>
-                        <Link to={`/todos/${todo.id}`}>{todo.title}</Link>
+                        <Link to={`/todos/${todo.id}`}>{todo.title}</Link> {/* Link ai dettagli */}
                     </li>
                 ))}
             </ul>
