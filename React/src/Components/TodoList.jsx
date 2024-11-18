@@ -1,21 +1,16 @@
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { useTodos } from "../Components/Context/TodoContext";
-import { Link, useSearchParams } from "react-router-dom";  // Importa useSearchParams
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux'; 
+import { setTodos, toggleTodo, removeTodo } from '../redux/todosSlice'; 
 
 const TodoList = () => {
-    const { todos, setTodos } = useTodos();
-    const [searchParams, setSearchParams] = useSearchParams();  // Ottieni e imposta i parametri della query
-    const [selector, setSelector] = useState(searchParams.get("search") || "");  // Usa il termine di ricerca nei parametri della query
+    const dispatch = useDispatch();
+    const todos = useSelector((state) => state.todos.todos); 
+    const [selector, setSelector] = useState('');
     const inputRef = useRef(null);
 
-    // Filtro i to-do in base al termine di ricerca
     const filtered = useMemo(() => {
-        if (!todos) return [];
-
         const selectorMin = selector.toLowerCase();
-        return todos.filter(todo =>
-            todo.title && todo.title.toLowerCase().includes(selectorMin)
-        );
+        return todos.filter((todo) => todo.title && todo.title.toLowerCase().includes(selectorMin));
     }, [todos, selector]);
 
     const handleInputChange = useCallback((e) => {
@@ -28,31 +23,29 @@ const TodoList = () => {
         }
     }, []);
 
-    // Effettua il fetching dei to-do se non sono già stati caricati
     useEffect(() => {
         const fetchTodos = async () => {
             try {
-                const response = await fetch("https://jsonplaceholder.typicode.com/todos");
+                const response = await fetch('https://jsonplaceholder.typicode.com/todos');
                 const data = await response.json();
-                setTodos(data);  // Imposta i to-do nel contesto
+                dispatch(setTodos(data)); 
             } catch (error) {
-                console.error("Error fetching todos:", error);
+                console.error('Error fetching todos:', error);
             }
         };
 
-        if (todos.length === 0) {  // Fetch solo se i to-do non sono già nel contesto
+        if (todos.length === 0) { 
             fetchTodos();
         }
-    }, [todos.length, setTodos]);
+    }, [dispatch, todos]);
 
-    // Sincronizza il termine di ricerca con i parametri della query
-    useEffect(() => {
-        if (selector) {
-            setSearchParams({ search: selector });  // Aggiungi il termine di ricerca nei parametri della query
-        } else {
-            setSearchParams({});  // Se il termine di ricerca è vuoto, rimuovi il parametro dalla query
-        }
-    }, [selector, setSearchParams]);
+    const handleToggle = (id) => {
+        dispatch(toggleTodo(id)); 
+    };
+
+    const handleRemove = (id) => {
+        dispatch(removeTodo(id)); 
+    };
 
     return (
         <div className="p-2">
@@ -70,9 +63,13 @@ const TodoList = () => {
             <div>
                 <ul>
                     {filtered.length > 0 ? (
-                        filtered.map(todo => (
+                        filtered.map((todo) => (
                             <li key={todo.id}>
-                                <Link to={`/todos/${todo.id}`}>{todo.title}</Link>  {/* Link ai dettagli */}
+                                <Link to={`/todos/${todo.id}`}>{todo.title}</Link>
+                                <button onClick={() => handleToggle(todo.id)}>
+                                    {todo.completed ? 'Mark as Incomplete' : 'Mark as Complete'}
+                                </button>
+                                <button onClick={() => handleRemove(todo.id)}>Remove</button>
                             </li>
                         ))
                     ) : (
@@ -81,9 +78,13 @@ const TodoList = () => {
                 </ul>
             </div>
             <ul>
-                {todos && todos.map((todo) => (
+                {todos.map((todo) => (
                     <li key={todo.id}>
-                        <Link to={`/todos/${todo.id}`}>{todo.title}</Link>  {/* Link ai dettagli */}
+                        <Link to={`/todos/${todo.id}`}>{todo.title}</Link>
+                        <button onClick={() => handleToggle(todo.id)}>
+                            {todo.completed ? 'Mark as Incomplete' : 'Mark as Complete'}
+                        </button>
+                        <button onClick={() => handleRemove(todo.id)}>Remove</button>
                     </li>
                 ))}
             </ul>
