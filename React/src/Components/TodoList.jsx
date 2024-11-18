@@ -1,15 +1,14 @@
-import { useEffect, useMemo, useState } from "react";
-import { useDispatch, useSelector } from "react-redux"; 
-import { setTodos } from "../redux/todosSlice"; 
+import { useCallback, useEffect, useMemo, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { setTodos, toggleTodo } from "../redux/todosSlice";  
 import { Link } from "react-router-dom"; 
 import { useSearchParams } from "react-router-dom"; 
 
 const TodoList = () => {
-  const dispatch = useDispatch(); 
+  const dispatch = useDispatch();
   const todos = useSelector((state) => state.todos.todos); 
-  const [searchParams, setSearchParams] = useSearchParams();  
+  const [searchParams, setSearchParams] = useSearchParams(); 
   const [selector, setSelector] = useState(searchParams.get("search") || "");  
-
   const filteredTodos = useMemo(() => {
     if (!todos) return [];
 
@@ -39,7 +38,6 @@ const TodoList = () => {
     }
   }, [dispatch, todos.length]);
 
-  
   useEffect(() => {
     if (selector) {
       setSearchParams({ search: selector });  
@@ -47,6 +45,10 @@ const TodoList = () => {
       setSearchParams({});  
     }
   }, [selector, setSearchParams]);
+
+  const handleToggle = (id) => {
+    dispatch(toggleTodo(id)); 
+  };
 
   return (
     <div className="p-2">
@@ -65,7 +67,13 @@ const TodoList = () => {
           {filteredTodos.length > 0 ? (
             filteredTodos.map((todo) => (
               <li key={todo.id}>
-                <Link to={`/todos/${todo.id}`}>{todo.title}</Link> 
+                <Link to={`/todos/${todo.id}`}>{todo.title}</Link>
+                <button
+                  onClick={() => handleToggle(todo.id)}
+                  style={{ color: todo.completed ? 'green' : 'red' }}
+                >
+                  {todo.completed ? 'Completato' : 'Non Completato'}
+                </button>
               </li>
             ))
           ) : (
@@ -76,7 +84,13 @@ const TodoList = () => {
       <ul>
         {todos && todos.map((todo) => (
           <li key={todo.id}>
-            <Link to={`/todos/${todo.id}`}>{todo.title}</Link> 
+            <Link to={`/todos/${todo.id}`}>{todo.title}</Link>
+            <button
+              onClick={() => handleToggle(todo.id)}
+              style={{ color: todo.completed ? 'green' : 'red' }}
+            >
+              {todo.completed ? 'Completato' : 'Non Completato'}
+            </button>
           </li>
         ))}
       </ul>
