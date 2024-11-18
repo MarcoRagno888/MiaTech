@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { useTodos } from "../Components/Context/TodoContext";
+import { useTodos } from "../Components/Context/TodoContext"; // Importa il contesto
 import { Link } from "react-router-dom";  // Importa Link per la navigazione
 
 const TodoList = () => {
@@ -62,7 +62,7 @@ const TodoList = () => {
                     {filtered.length > 0 ? (
                         filtered.map(todo => (
                             <li key={todo.id}>
-                                <Link to={`/todos/${todo.id}`}>{todo.title}</Link> {/* Link ai dettagli */}
+                                <Link to={`/todos/${todo.id}`}>{todo.title}</Link>  {/* Aggiungi il link per i dettagli */}
                             </li>
                         ))
                     ) : (
@@ -73,7 +73,7 @@ const TodoList = () => {
             <ul>
                 {todos && todos.map((todo) => (
                     <li key={todo.id}>
-                        <Link to={`/todos/${todo.id}`}>{todo.title}</Link> {/* Link ai dettagli */}
+                        <Link to={`/todos/${todo.id}`}>{todo.title}</Link>  {/* Aggiungi il link per i dettagli */}
                     </li>
                 ))}
             </ul>
