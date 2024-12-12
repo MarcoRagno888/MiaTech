@@ -85,3 +85,13 @@ function getUserTodos(userId: number): Todo[] {
   
   console.log('Todo di John Doe:', user1Todos);
   console.log('Todo di Jane Smith:', user2Todos);
+
+function error(message: string): never {
+    throw new Error(message); 
+  }
+  
+  try {
+    error('Si è verificato un errore!');
+  } catch (e) {
+    console.log(e);
+  }
