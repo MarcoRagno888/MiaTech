@@ -7,3 +7,5 @@ const myTodo: Todo = {
 };
 
 console.log(myTodo);
+
+let todos: Todo[] = [];
