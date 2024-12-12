@@ -1,4 +1,5 @@
 import { Todo } from './types';
+import { User } from './types';
 
 const myTodo: Todo = {
   id: 1,
@@ -28,3 +29,20 @@ function addTodo(title: string): Todo {
   addTodo('Costruire una Todo list');
   
   console.log(todos);
+
+  //---------
+
+
+const user1: User = {
+  id: 1,
+  name: 'John Doe'
+};
+
+const user2: User = {
+  id: 2,
+  name: 'Jane Smith',
+  email: 'jane.smith@example.com'
+};
+
+console.log(user1);
+console.log(user2);
