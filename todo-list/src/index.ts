@@ -9,7 +9,7 @@ const myTodo: Todo = {
 
 console.log(myTodo);
 
-let todos: Todo[] = [];
+//let todos: Todo[] = [];
 
 function addTodo(title: string): Todo {
     const id = todos.length > 0 ? todos[todos.length - 1].id + 1 : 1;
@@ -46,3 +46,32 @@ const user2: User = {
 
 console.log(user1);
 console.log(user2);
+
+//---------
+
+let todos: Todo[] = [
+    { id: 1, title: 'Imparare TypeScript', completed: false },
+    { id: 2, title: 'Costruire una Todo list', completed: false }
+  ];
+  
+  let users: User[] = [
+    { id: 1, name: 'John Doe' },
+    { id: 2, name: 'Jane Smith', email: 'jane.smith@example.com' }
+  ];
+
+
+function assignTodoToUser(todoId: number, userId: number): Todo | undefined {
+    const todo = todos.find(t => t.id === todoId);
+  
+    if (todo) {
+      todo.userId = userId;
+      return todo;
+    }
+  
+    return undefined;
+  }
+  
+ 
+  assignTodoToUser(1, 2);
+  
+  console.log(todos);
