@@ -75,3 +75,13 @@ function assignTodoToUser(todoId: number, userId: number): Todo | undefined {
   assignTodoToUser(1, 2);
   
   console.log(todos);
+
+function getUserTodos(userId: number): Todo[] {
+    return todos.filter(todo => todo.userId === userId);
+  }
+
+  const user1Todos = getUserTodos(1); 
+  const user2Todos = getUserTodos(2); 
+  
+  console.log('Todo di John Doe:', user1Todos);
+  console.log('Todo di Jane Smith:', user2Todos);
