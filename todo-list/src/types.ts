@@ -1,9 +1,16 @@
+export enum TodoStatus {
+  Pending = 'Pending',
+  InProgress = 'InProgress',
+  Completed = 'Completed'
+}
+
 export interface Todo {
   id: number;
   title: string;
   completed: boolean;
   userId?: number;
-  metadata?: string | object; 
+  metadata?: string | object;
+  status: TodoStatus;
 }
 
   export interface TodoWithMetadata extends Todo {
