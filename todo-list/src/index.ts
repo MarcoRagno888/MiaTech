@@ -1,4 +1,4 @@
-import { Todo } from './types';
+import { Project, Todo } from './types';
 import { User } from './types';
 
 let todos: Todo[] = [
@@ -76,6 +76,15 @@ try {
 
 function getTodoSummary(todo: Todo): [string, boolean] {
   return [todo.title, todo.completed];
+}
+
+function createProject(id: number, name: string, users: User[], todos: Todo[]): Project {
+  return {
+    id,
+    name,
+    users,
+    todos
+  };
 }
 
 console.log(todos);
