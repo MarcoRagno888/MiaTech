@@ -1,11 +1,6 @@
 import { Project, Todo, TodoStatus } from './types';
 import { User } from './types';
 
-/*let todos: Todo[] = [
-  { id: 1, title: 'Imparare TypeScript', completed: false },
-  { id: 2, title: 'Costruire una Todo list', completed: false }
-];*/
-
 /*let users: User[] = [
   { id: 1, name: 'John Doe' },
   { id: 2, name: 'Jane Smith', email: 'jane.smith@example.com' }
@@ -85,6 +80,22 @@ function createProject(id: number, name: string, users: User[], todos: Todo[]): 
     users,
     todos
   };
+}
+
+let todos: Todo[] = [
+  { id: 1, title: 'Imparare TypeScript', completed: false, status: TodoStatus.Pending },
+  { id: 2, title: 'Costruire una Todo list', completed: false, status: TodoStatus.Pending }
+];
+
+function updateTodoStatus(todoId: number, status: TodoStatus): Todo | undefined {
+  const todo = todos.find(t => t.id === todoId);
+
+  if (todo) {
+    todo.status = status;  
+    return todo;
+  }
+
+  return undefined; 
 }
 
 console.log(todos);
