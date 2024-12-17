@@ -11,26 +11,19 @@ console.log(myTodo);
 
 //let todos: Todo[] = [];
 
-function addTodo(title: string, metadata?: any): Todo | TodoWithMetadata {
+function addTodo(title: string, metadata?: string | object): Todo {
   const id = todos.length > 0 ? todos[todos.length - 1].id + 1 : 1;
 
   const newTodo: Todo = {
     id,
     title,
     completed: false,
+    metadata  // metadata che può essere di tipo stringa o oggetto
   };
 
-  if (metadata) {
-    const newTodoWithMetadata: TodoWithMetadata = {
-      ...newTodo,
-      metadata, 
-    };
-    todos.push(newTodoWithMetadata);
-    return newTodoWithMetadata;
-  } else {
-    todos.push(newTodo);
-    return newTodo;
-  }
+  todos.push(newTodo);
+
+  return newTodo;
 }
 
   //---------
