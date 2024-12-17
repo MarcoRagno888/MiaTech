@@ -30,3 +30,5 @@ export interface Project {
   users: User[];
   todos: Todo[];
 }
+
+export type TodoRecord = Record<number, Todo>;
