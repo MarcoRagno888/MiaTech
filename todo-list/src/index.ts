@@ -95,3 +95,23 @@ function error(message: string): never {
   } catch (e) {
     console.log(e);
   }
+
+  //--------------------
+
+function parseInput(input: unknown): string {
+  if (typeof input === 'string') {
+    return input;  
+  } else if (typeof input === 'number') {
+    return input.toString();  
+  } else {
+    error('Input non valido: deve essere una stringa o un numero');
+  }
+}
+
+try {
+  console.log(parseInput('Hello, TypeScript!')); 
+  console.log(parseInput(12345)); 
+  console.log(parseInput(true)); 
+} catch (e) {
+  console.log(e);  
+}
