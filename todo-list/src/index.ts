@@ -1,4 +1,4 @@
-import { Todo } from './types';
+import { Todo, TodoWithMetadata } from './types';
 import { User } from './types';
 
 const myTodo: Todo = {
@@ -11,19 +11,26 @@ console.log(myTodo);
 
 //let todos: Todo[] = [];
 
-function addTodo(title: string, metadata?: any): Todo {
+function addTodo(title: string, metadata?: any): Todo | TodoWithMetadata {
   const id = todos.length > 0 ? todos[todos.length - 1].id + 1 : 1;
 
   const newTodo: Todo = {
     id,
     title,
     completed: false,
-    metadata  // Aggiungi metadata al nuovo Todo
   };
 
-  todos.push(newTodo);
-
-  return newTodo;
+  if (metadata) {
+    const newTodoWithMetadata: TodoWithMetadata = {
+      ...newTodo,
+      metadata, 
+    };
+    todos.push(newTodoWithMetadata);
+    return newTodoWithMetadata;
+  } else {
+    todos.push(newTodo);
+    return newTodo;
+  }
 }
 
   //---------
