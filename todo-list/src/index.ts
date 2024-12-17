@@ -1,5 +1,6 @@
 import { Project, Todo, TodoStatus } from './types';
 import { User } from './types';
+import { User, User } from './User';
 
 /*let users: User[] = [
   { id: 1, name: 'John Doe' },
@@ -13,7 +14,7 @@ function addTodo(title: string, metadata?: string | object): Todo {
     id,
     title,
     completed: false,
-    status: TodoStatus.Pending,  // Imposta lo status su Pending
+    status: TodoStatus.Pending, 
     metadata
   };
 
@@ -99,3 +100,37 @@ function updateTodoStatus(todoId: number, status: TodoStatus): Todo | undefined 
 }
 
 console.log(todos);
+
+//-------------
+
+const user1 = new User(1, 'John Doe');
+const user2 = new User(2, 'Jane Smith', 'jane.smith@example.com');
+
+
+const todo1: Todo = {
+  id: 1,
+  title: 'Imparare TypeScript',
+  completed: false,
+  status: TodoStatus.Pending
+};
+
+const todo2: Todo = {
+  id: 2,
+  title: 'Costruire una Todo list',
+  completed: false,
+  status: TodoStatus.Pending
+};
+
+const todo3: Todo = {
+  id: 3,
+  title: 'Imparare TypeScript Avanzato',
+  completed: false,
+  status: TodoStatus.Pending
+};
+
+user1.addTodo(todo1);
+user1.addTodo(todo2);
+user2.addTodo(todo3);
+
+console.log('Todo di John Doe:', user1.todos);
+console.log('Todo di Jane Smith:', user2.todos);
