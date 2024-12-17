@@ -6,10 +6,10 @@ let todos: Todo[] = [
   { id: 2, title: 'Costruire una Todo list', completed: false }
 ];
 
-let users: User[] = [
+/*let users: User[] = [
   { id: 1, name: 'John Doe' },
   { id: 2, name: 'Jane Smith', email: 'jane.smith@example.com' }
-];
+];*/
 
 function addTodo(title: string, metadata?: string | object): Todo {
   const id = todos.length > 0 ? todos[todos.length - 1].id + 1 : 1;
@@ -72,6 +72,10 @@ try {
   error('Si è verificato un errore!');
 } catch (e) {
   console.log(e);
+}
+
+function getTodoSummary(todo: Todo): [string, boolean] {
+  return [todo.title, todo.completed];
 }
 
 console.log(todos);
