@@ -11,24 +11,20 @@ console.log(myTodo);
 
 //let todos: Todo[] = [];
 
-function addTodo(title: string): Todo {
-    const id = todos.length > 0 ? todos[todos.length - 1].id + 1 : 1;
-  
-    const newTodo: Todo = {
-      id,
-      title,
-      completed: false
-    };
-  
-    todos.push(newTodo);
-  
-    return newTodo;
-  }
-  
-  addTodo('Imparare TypeScript');
-  addTodo('Costruire una Todo list');
-  
-  console.log(todos);
+function addTodo(title: string, metadata?: any): Todo {
+  const id = todos.length > 0 ? todos[todos.length - 1].id + 1 : 1;
+
+  const newTodo: Todo = {
+    id,
+    title,
+    completed: false,
+    metadata  // Aggiungi metadata al nuovo Todo
+  };
+
+  todos.push(newTodo);
+
+  return newTodo;
+}
 
   //---------
 
