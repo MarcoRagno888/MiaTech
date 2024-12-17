@@ -1,10 +1,10 @@
-import { Project, Todo } from './types';
+import { Project, Todo, TodoStatus } from './types';
 import { User } from './types';
 
-let todos: Todo[] = [
+/*let todos: Todo[] = [
   { id: 1, title: 'Imparare TypeScript', completed: false },
   { id: 2, title: 'Costruire una Todo list', completed: false }
-];
+];*/
 
 /*let users: User[] = [
   { id: 1, name: 'John Doe' },
@@ -18,14 +18,14 @@ function addTodo(title: string, metadata?: string | object): Todo {
     id,
     title,
     completed: false,
-    metadata  
+    status: TodoStatus.Pending,  // Imposta lo status su Pending
+    metadata
   };
 
   todos.push(newTodo);
 
   return newTodo;
 }
-
 function updateTodo(id: number, updatedFields: Partial<Todo>): Todo | undefined {
   const todo = todos.find(t => t.id === id);
 
