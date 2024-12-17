@@ -1,4 +1,4 @@
-import { Project, Todo, TodoStatus } from './types';
+import { PartialTodo, Project, Todo, TodoStatus } from './types';
 import { User } from './types';
 import { User, User } from './User';
 
@@ -85,7 +85,7 @@ function createProject(id: number, name: string, users: User[], todos: Todo[]): 
 
 let todos: Todo[] = [
   { id: 1, title: 'Imparare TypeScript', completed: false, status: TodoStatus.Pending },
-  { id: 2, title: 'Costruire una Todo list', completed: false, status: TodoStatus.Pending }
+  { id: 2, title: 'Costruire una Todo list', completed: true, status: TodoStatus.Completed }
 ];
 
 function updateTodoStatus(todoId: number, status: TodoStatus): Todo | undefined {
@@ -134,3 +134,16 @@ user2.addTodo(todo3);
 
 console.log('Todo di John Doe:', user1.todos);
 console.log('Todo di Jane Smith:', user2.todos);
+
+//--------
+
+function updatePartialTodo(todoId: number, partialTodo: PartialTodo): Todo | undefined {
+  const todo = todos.find(t => t.id === todoId);
+
+  if (todo) {
+    Object.assign(todo, partialTodo);
+    return todo;
+  }
+
+  return undefined;
+}
